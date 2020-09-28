@@ -66,13 +66,57 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 	mvn install
 	</code></pre>
 1. This should run and leave "Supercar-Trader.war" in the "target/" directory
-
-
-1. Now configure a user for the Tomcat Manager. In "$TOMCAT_HOME/conf/tomcat-users.xml" add a line line the following:
-	<pre><code>
- 	&lt;user username="user" password="pass" roles="manager-script,manager-gui"/&gt;
-	</code></pre>
-1. Restart Tomcat
+1. Install Java
+	- Run the below (may change  based on your linux distribution)
+		<pre><code>
+ 		sudo yum install java-1.8.0 (may vary based on your linux distro)
+ 		</code></pre>
+	- Check the Java Version
+		<pre><code>
+ 		java -version
+		===OUTPUT===
+		openjdk version "1.8.0_265"
+		OpenJDK Runtime Environment (build 1.8.0_265-b01)
+		OpenJDK 64-Bit Server VM (build 25.265-b01, mixed mode)
+ 		</code></pre>
+1. Install Tomcat
+	- We can download Apache tomcat 9 tar.gz either from its official Web site or using wget command from the terminal.
+	- Install wget  command  to  directly downlaod Tomcat on  our host fromt the internet
+		<pre><code>
+ 		sudo yum install wget (may vary based on your linux distro)
+ 		</code></pre>
+	- Install Tomcat
+		<pre><code>
+ 		sudo wget http://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.38/bin/apache-tomcat-9.0.38.tar.gz 
+ 		</code></pre>
+	- Run the beneath tar command to extract Apache tomcat 9 under the /opt folder
+		<pre><code>
+ 		sudo tar -zxpvf apache-tomcat-9.0.38.tar.gz  -C /opt/
+		cd /opt/
+		sudo mv apache-tomcat-9.0.38 tomcat
+		sudo chown -R [your-user]:[your-user] /opt/tomcat  (if you are not executing  as the root user)
+ 		</code></pre>
+	- Before starting the Tomcat Service let’’s first set the required CATALINA_HOME environment variable using below commands :
+		<pre><code>
+		echo "export CATALINA_HOME='/opt/tomcat/'" >> ~/.bashrc
+		source ~/.bashrc
+		</code></pre>
+1. Run Tomcat
+	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/opt/tomcat/conf/tomcat-users.xml” just above <tomcat-users> tag
+		<pre><code>
+		vi /opt/tomcat/conf/tomcat-users.xml
+		</code></pre>
+		Then add the below just above <tomcat-users> tag
+		<pre><code>
+		<!-- User Admin Who can access manager and admin section both -->
+		<role rolename="admin-gui" />
+		<user username="admin" password="<Enter-Secure-Password>" roles="admin-gui" />
+		</code></pre>
+	-Start Tomcat
+		<pre><code>
+		cd /opt/tomcat/bin/
+		./startup.sh
+		</code></pre>
 1. Use the Tomcat Manager to deploy the war file
    
    You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below
