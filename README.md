@@ -152,4 +152,15 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 	</code></pre>
 
 ### Database Deployment
-	
+1. Now we will run the Database Scripts, that create the Database Schema, Tables, and Data for our Appliation
+1. Navigate to our Script location
+	<pre><code>
+	cd /opt/appdynamics/DevNet-Labs/applications/Supercar-Trader/src/main/resources/db
+ 	</code></pre>
+1. Run the following databse scripts
+	<pre><code>
+	mysql -u root -pp@ssW0rd1 < mysql-01.sql
+	mysql -u root -pp@ssW0rd1 < mysql-02.sql
+	mysql -u root -pp@ssW0rd1 < mysql-03.sql
+ 	</code></pre>
+
