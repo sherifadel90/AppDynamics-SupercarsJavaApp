@@ -142,6 +142,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 1. Use the Tomcat Manager to deploy the war file
    - Go to Tomcat GUI at http://{ip-address-or-Hostname}:8080/
    - Click  on Manager App button on the right
+   ![image](doc-images/Tomcat-Homepage.png)
    - Enter the Manager Credentails that we added in the “/opt/tomcat/conf/tomcat-users.xml” file
    - You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below, we will use the later
    	- The context path of a web application defines the URL that end users will access the application from. So we will add "/Supercar-Trader" where pur  application can be accessed from a URL like http://{ip-address-or-Hostname}:8080/Supercar-Trader.
