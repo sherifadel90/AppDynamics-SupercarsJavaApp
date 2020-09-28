@@ -173,3 +173,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 	
 1. Now the app is available on "http://{ip-address-or-Hostname}:8080/Supercar-Trader" on your Tomcat instance
 
+## Considerations
+If you  will be proceeding to DevNet Labs, please note the below Differences:
+1. Start Tomcat Command: **/usr/local/apache/apache-tomcat-7/biin/startup.sh** instead of **sudo systemctl start apache-tomcat-7.service**
+1. Stop Tomcat Command: **/usr/local/apache/apache-tomcat-7/biin/shutdown.sh** instead of **sudo systemctl stop apache-tomcat-7.service**
