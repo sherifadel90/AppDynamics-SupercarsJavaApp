@@ -115,6 +115,20 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		&lt;role rolename="admin-gui" />
 		&lt;user username="admin" password="password" roles="admin-gui" /&gt; 
 		</code></pre>
+	- If you  will acess Tomcat GUI from outside your Host, you  willneed to do the below
+		<pre><code>
+		vi /opt/tomcat/webapps/manager/META-INF/context.xml
+		</code></pre>
+		Then comment the Valve Tag to be  similar  to  the below
+		<pre><code>
+		&lt;Context antiResourceLocking="false" privileged="true" &gt;
+		&lt;!--
+		  &lt;Valve className="org.apache.catalina.valves.RemoteAddrValve"
+			 allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /&gt;
+		-->
+		  &lt;Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/&gt;
+		&lt;/Context&gt;
+		</code></pre>
 	- Start Tomcat
 		<pre><code>
 		cd /opt/tomcat/bin/
