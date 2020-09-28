@@ -6,7 +6,7 @@ This is a simple Struts application which provides for an online supercar store 
 
 ## Architecture
 
-The application is based on a Struts front end, using a [MySQL](https://www.mysql.com) back end.  MySql 5.7 is recommended.
+The application is based on a Struts front end deployed on Apache Tomcat, using a [MySQL](https://www.mysql.com) back end.  MySql 5.7 is recommended.
 
 
 ## Database
@@ -21,7 +21,9 @@ There are three scripts you will need to run in order:
 
 The datasouce is defined in context.xml in src/webapp/META-INF
 
-## Building
+## Setup
+
+### Application Server Setup
 
 1. Have [Git](https://git-scm.com) installed and working
 1. Use Git to obtain the WAR File code
@@ -102,6 +104,9 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		Go to http://{ip-address-or-Hostname}:8080/
 		</code></pre>
 
+### Database Setup
+
+### Application Deployment
 1. Use the Tomcat Manager to deploy the war file
    - Go to Tomcat GUI at http://{ip-address-or-Hostname}:8080/
    - Click  on Manager App button on the right where  you'll be prompted to enter the Manager Credentails that we added in the “/usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml” file  
@@ -116,4 +121,6 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 	 ![image](doc-images/Tomcat-WAR-Deployment.png)
 	
 1. Now the app is available on "http://{ip-address-or-Hostname}:8080/Supercar-Trader" on your Tomcat instance
+
+### Database Deployment
 	
