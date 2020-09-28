@@ -21,34 +21,20 @@ Use the following case-sensitive credentials to login:
 
 Navigate to the Analytics Configuration
 
-1. Select the **Home** tab at the top left of the screen.
-2. Select the **Getting Started** tab.
-3. Click **Getting Started Wizard**.
 1.	Select the **Analytics** tab at the top left of the screen.
 2.	Select the **Configuration** Left tab.
 3.	Select the **Transaction Analytics - Configuration** tab.
 4.	**Mark the Checkbox** next to the SuperCars Application
 
 
-  ![Download Wizard 1](assets/images/01-enable-analytics.png)
+  ![Enable Analytics](assets/images/06-enable-analytics-01.png)
 
-Select the agent for download.
-1. Click **Databases**.
+Apply any manual load on the Application, to validate Analytics is working for that Application
+1.	Select the **Analytics tab** at the top left of the screen.
+2.	Select the **Home** Left tab.
+3.	Wait for couple of minutes, and Validate that there is Analytics Data
 
-  ![Download Wizard 2](assets/images/03-download-wizard-02.png)
 
-Download the Database Agent.
+  ![Validate Analytics](assets/images/06-validate-analytics-02.png)
 
-1. Select **MySQL** from the **Select Database Type** dropdown menu.
-2. Accept the defaults for the Controller connection.
-3. Click **Click Here to Download**.
-
-  ![Download Wizard 3](assets/images/03-download-wizard-03.png)
-
-Save the Database Visibility Agent file to your local file system.
-
-Your browser should prompt you to save the agent file to your local file system, similar to the following image(depending on your OS).
-
-![Download Wizard 4](assets/images/03-download-wizard-04.png)
-
-**Next**: Install the Database Visibility Agent
+**Next**: Configure HTTP Data Collectors
