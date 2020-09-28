@@ -115,7 +115,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		&lt;role rolename="admin-gui" />
 		&lt;user username="admin" password="password" roles="admin-gui" /&gt; 
 		</code></pre>
-	- If you  will acess Tomcat GUI from outside your Host, you  willneed to do the below
+	- By default, Tomcat manager is configured to be accessed from the same server where it’s installed. If you access manager, you will get 403 error, so For a manager to be accessible from any host/IP, you need to do the following:
 		<pre><code>
 		vi /opt/tomcat/webapps/manager/META-INF/context.xml
 		</code></pre>
@@ -140,10 +140,18 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		</code></pre>
 
 1. Use the Tomcat Manager to deploy the war file
+   - Go to Tomcat GUI at http://{ip-address-or-Hostname}:8080/
+   - Click  on Manager App button on the right
+   - Enter the Manager Credentails that we added in the “/opt/tomcat/conf/tomcat-users.xml” file
+   - You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below, we will use the later
+   	- The context path of a web application defines the URL that end users will access the application from. So we will add "/Supercar-Trader" where pur  application can be accessed from a URL like http://{ip-address-or-Hostname}:8080/Supercar-Trader.
+	- in the WAR directory,  we  will  add the WAR file we  generated  from  the Maven Build,  which should be located at "/opt/AppDynamics-SupercarsJavaApp/Supercar-Trader/target"
+	-  Click  Deploy
+   
    
    You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below
    ![image](doc-images/tomcat-war-deployment.png)
-   
+   - Start Tomcat
    Click on “Manager App” , It will prompt us for the User name and password, specify the user’s credentials whatever we set in the file ‘tomcat-users.xml‘
     
 1. Now the app is available on "/Supercar-Trader/home.do" on your Tomcat instance
