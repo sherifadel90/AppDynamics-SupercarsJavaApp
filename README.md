@@ -55,15 +55,14 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		<pre><code>
  		sudo yum install tomcat (may vary based on your linux distro)
  		</code></pre>
-	- Before starting the Tomcat Service let’’s first set the required CATALINA_HOME environment variable using below commands :
+	- Then Install  TomCat  Admin Packages, mainly to install the default Tomcat root page (tomcat-webapps), and the Tomcat Web Application Manager and Virtual Host Manager (tomcat-admin-webapps)
 		<pre><code>
-		echo "export CATALINA_HOME='/usr/local/apache/apache-tomcat-7/'" >> ~/.bashrc
-		source ~/.bashrc
-		</code></pre>
+ 		sudo yum install tomcat-webapps tomcat-admin-webapps  (may vary based on your linux distro)
+ 		</code></pre>
 1. Run Tomcat
 	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/usr/share/tomcat/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
 		<pre><code>
-		vi /usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml
+		sudo vi /usr/share/tomcat/conf/tomcat-users.xml
 		</code></pre>
 		Then add the below just above </tomcat-users> tag to create a User Admin Who can access manager and admin section both
 		<pre><code>
@@ -74,31 +73,18 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		&lt;role rolename="admin-gui" />
 		&lt;user username="admin" password="password" roles="admin-gui" /&gt; 
 		</code></pre>
-	- By default, Tomcat manager is configured to be accessed from the same server where it’s installed. If you access manager, you will get 403 error, so For a manager to be accessible from any host/IP, you need to do the following:
-		<pre><code>
-		vi /usr/local/apache/apache-tomcat-7/webapps/manager/META-INF/context.xml
-		</code></pre>
-		Then comment the Valve Tag to be  similar  to  the below
-		<pre><code>
-		&lt;Context antiResourceLocking="false" privileged="true" &gt;
-		&lt;!--
-		  &lt;Valve className="org.apache.catalina.valves.RemoteAddrValve"
-			 allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /&gt;
-		-->
-		  &lt;Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/&gt;
-		&lt;/Context&gt;
-		</code></pre>
 	- Start Tomcat
 		<pre><code>
-		cd /usr/local/apache/apache-tomcat-7/bin/
-		./startup.sh
+		sudo systemctl start tomcat
+		</code></pre>
+		And enable Tomcat to automatically start if the server is rebooted:
+		<pre><code>
+		sudo systemctl enable tomcat
 		</code></pre>
 	- Open Tomcat URL in the browser to verify its isntallation
 		<pre><code>
 		Go to http://{ip-address-or-Hostname}:8080/
 		</code></pre>
-
-### Database Setup
 
 ### Application Deployment
 1. Use the Tomcat Manager to deploy the war file
@@ -115,6 +101,38 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 	 ![image](doc-images/Tomcat-WAR-Deployment.png)
 	
 1. Now the app is available on "http://{ip-address-or-Hostname}:8080/Supercar-Trader" on your Tomcat instance
+
+### Database Setup
+1. Install MySQL 5.7 Community Version
+	<pre><code>
+	sudo yum install wget
+	wget https://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+	sudo rpm -ivh mysql57-community-release-el7-9.noarch.rpm
+	sudo yum install mysql-server
+ 	</code></pre>
+1. Start the Service  
+	<pre><code>
+	sudo systemctl start mysqld
+ 	</code></pre>
+1. Verify the Service Status
+	<pre><code>
+	service mysqld status
+	===OUTPUT===
+	Redirecting to /bin/systemctl status mysqld.service
+	● mysqld.service - MySQL Server
+	   Loaded: loaded (/usr/lib/systemd/system/mysqld.service; enabled; vendor preset: disabled)
+	   Active: active (running) since Mon 2020-09-28 13:02:28 UTC; 11s ago
+	     Docs: man:mysqld(8)
+		   http://dev.mysql.com/doc/refman/en/using-systemd.html
+	  Process: 2742 ExecStart=/usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid $MYSQLD_OPTS (code=exited, status=0/SUCCESS)
+	  Process: 2689 ExecStartPre=/usr/bin/mysqld_pre_systemd (code=exited, status=0/SUCCESS)
+	 Main PID: 2745 (mysqld)
+	   CGroup: /system.slice/mysqld.service
+		   └─2745 /usr/sbin/mysqld --daemonize --pid-file=/var/run/mysqld/mysqld.pid
+	Sep 28 13:02:20 ip-172-31-0-231.eu-central-1.compute.internal systemd[1]: Starting MySQL Server...
+	Sep 28 13:02:28 ip-172-31-0-231.eu-central-1.compute.internal systemd[1]: Started MySQL Server.
+ 	</code></pre>
+
 
 ### Database Deployment
 	
