@@ -132,7 +132,24 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 	Sep 28 13:02:20 ip-172-31-0-231.eu-central-1.compute.internal systemd[1]: Starting MySQL Server...
 	Sep 28 13:02:28 ip-172-31-0-231.eu-central-1.compute.internal systemd[1]: Started MySQL Server.
  	</code></pre>
-
+1. Secure MySQL
+	-During the installation process, a temporary password is generated for the MySQL root user. Locate it in the mysqld.log with this command:
+	<pre><code>
+	sudo grep 'temporary password' /var/log/mysqld.log
+ 	</code></pre>
+	Make note of the password, which you will need in the next step to secure the installation and where you will be forced to change it.
+	-Execute the secure mysql installation tool
+	<pre><code>
+	mysql_secure_installation
+ 	</code></pre>
+	Enter the following:
+	<pre><code>
+	New password: "p@ssW0rd1"
+	Remove anonymous users? n
+	Disallow root login remotely? n
+	Remove test database and access to it? n
+	Reload privilege tables now? y
+	</code></pre>
 
 ### Database Deployment
 	
