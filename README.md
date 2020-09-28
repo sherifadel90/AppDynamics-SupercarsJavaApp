@@ -106,9 +106,8 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		<pre><code>
 		vi /opt/tomcat/conf/tomcat-users.xml
 		</code></pre>
-		Then add the below just above <tomcat-users> tag
+		Then add the below just above <tomcat-users> tag to createa User Admin Who can access manager and admin section both
 		<pre><code>
-		<!-- User Admin Who can access manager and admin section both -->
 		<role rolename="admin-gui" />
 		<user username="admin" password="<Enter-Secure-Password>" roles="admin-gui" />
 		</code></pre>
