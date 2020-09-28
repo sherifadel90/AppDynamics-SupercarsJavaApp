@@ -23,7 +23,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 
 ## Setup
 
-### Application Server Setup
+### Application Server Setup (Linux)
 
 1. Have [Git](https://git-scm.com) installed and working
 	<pre><code>
@@ -59,7 +59,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		<pre><code>
  		sudo wget https://downloads.apache.org/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106.tar.gz
  		</code></pre>
-	- Run the beneath tar command to extract Apache tomcat 9 under the /opt folder
+	- Extract Apache Tomcat 7 under the /usr/local/ folder
 		<pre><code>
 		sudo mkdir /usr/local/apache
  		sudo tar -zxpvf apache-tomcat-7.0.106.tar.gz -C /usr/local/apache
@@ -67,7 +67,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		sudo mv apache-tomcat-7.0.106 apache-tomcat-7
 		sudo chown -R [your-user]:[your-user] /usr/local/apache  (if you are not executing  as the root user)
  		</code></pre>
-	- Before starting the Tomcat Service let’’s first set the required CATALINA_HOME environment variable using below commands :
+	- Before starting the Tomcat Service let’s first set the required CATALINA_HOME environment variable using below commands :
 		<pre><code>
 		echo "export CATALINA_HOME='/usr/local/apache/apache-tomcat-7/'" >> ~/.bashrc
 		source ~/.bashrc
@@ -95,7 +95,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		Go to http://{ip-address-or-Hostname}:8080/
 		</code></pre>
 
-### Database Setup
+### Database Setup (Linux)
 1. Install MySQL 5.7 Community Version
 	<pre><code>
 	sudo yum install wget
