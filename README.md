@@ -141,21 +141,16 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 
 1. Use the Tomcat Manager to deploy the war file
    - Go to Tomcat GUI at http://{ip-address-or-Hostname}:8080/
-   - Click  on Manager App button on the right
+   - Click  on Manager App button on the right where  you'll be prompted to enter the Manager Credentails that we added in the “/opt/tomcat/conf/tomcat-users.xml” file  
    ![image](doc-images/Tomcat-Homepage.png)
-   - Enter the Manager Credentails that we added in the “/opt/tomcat/conf/tomcat-users.xml” file
-   - You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below, we will use the later
-   	- The context path of a web application defines the URL that end users will access the application from. So we will add "/Supercar-Trader" where pur  application can be accessed from a URL like http://{ip-address-or-Hostname}:8080/Supercar-Trader.
-	- in the WAR directory,  we  will  add the WAR file we  generated  from  the Maven Build,  which should be located at "/opt/AppDynamics-SupercarsJavaApp/Supercar-Trader/target"
+   - To Deploy an Applicationn, You can either upload the WAR file through the Tomcat Manager web page or specify the path of the WAR file if it exists on Tomcat host
+   - Since we've built our WAR file and it already  exists on the Server, we will use the second approach: 
+   	- Scroll
+		 - Scroll Down to the "Deploy directory or WAR file located on server" Section
+		 - Contect Path: Defines the URL that end users will access the application from. So we will add "/Supercar-Trader" where our application can be accessed from a URL like http://{ip-address-or-Hostname}:8080/Supercar-Trader
+		 - WAR or Directory Path: THe path of WAR file we generated from the Maven Build, which should be located at "/opt/AppDynamics-SupercarsJavaApp/Supercar-Trader/target"
 	-  Click  Deploy
 	 ![image](doc-images/Tomcat-WAR-Deployment.png)
 	
-   
-   
-   You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below
-   ![image](doc-images/tomcat-war-deployment.png)
-   - Start Tomcat
-   Click on “Manager App” , It will prompt us for the User name and password, specify the user’s credentials whatever we set in the file ‘tomcat-users.xml‘
-    
-1. Now the app is available on "/Supercar-Trader/home.do" on your Tomcat instance
+1. Now the app is available on "http://{ip-address-or-Hostname}:8080/Supercar-Trader" on your Tomcat instance
 	
