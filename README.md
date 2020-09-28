@@ -102,31 +102,35 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		source ~/.bashrc
 		</code></pre>
 1. Run Tomcat
-	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/opt/tomcat/conf/tomcat-users.xml” just above <tomcat-users> tag
+	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/opt/tomcat/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
 		<pre><code>
 		vi /opt/tomcat/conf/tomcat-users.xml
 		</code></pre>
-		Then add the below just above <tomcat-users> tag to createa User Admin Who can access manager and admin section both
+		Then add the below just above </tomcat-users> tag to create a User Admin Who can access manager and admin section both
 		<pre><code>
+		&lt;!-- User linuxtechi who can access only manager section --&gt; 
+		&lt;role rolename="manager-gui" /&gt; 
+		&lt;user username="manager" password="password" roles="manager-gui" /&gt; 
 		&lt;!-- User Admin Who can access manager and admin section both --&gt; 
-		&lt;role rolename="admin-gui" /&gt; 
-		&lt;user username="admin" password="<Enter-Secure-Password>" roles="admin-gui" /&gt; 
-		</code></pre>
-	-Start Tomcat
+		&lt;role rolename="admin-gui" />
+		&lt;user username="admin" password="password" roles="admin-gui" /&gt; 
+		&lt;/code></pre>
+	- Start Tomcat
 		<pre><code>
 		cd /opt/tomcat/bin/
 		./startup.sh
 		</code></pre>
-	- Open Tomcat URL in the browser to verify its isntallation, go to http://&lt;your-ip-address&gt;:8080/
+	- Open Tomcat URL in the browser to verify its isntallation
 		<pre><code>
 		Go to http://{ip-address-or-Hostname}:8080/
 		</code></pre>
-	Open the web broswer type the following URL :
 
 1. Use the Tomcat Manager to deploy the war file
    
    You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below
    ![image](doc-images/tomcat-war-deployment.png)
+   
+   Click on “Manager App” , It will prompt us for the User name and password, specify the user’s credentials whatever we set in the file ‘tomcat-users.xml‘
     
 1. Now the app is available on "/Supercar-Trader/home.do" on your Tomcat instance
 	
