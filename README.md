@@ -57,7 +57,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 1. Use Git to obtain the source code
 	<pre><code>
 	cd /opt
- 	git clone https://github.com/Appdynamics/DevNet-Labs.git
+ 	git clone https://github.com/sherifadel90/AppDynamics-SupercarsJavaApp.git
  	</code></pre>
 1. Change to the /applications/Supercar-Trader directory and then execute the following for the build
 	<pre><code>
