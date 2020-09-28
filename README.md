@@ -144,7 +144,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
  	</code></pre>
 	Enter the following:
 	<pre><code>
-	New password: "p@ssW0rd1"
+	New password: "Welcome1!"
 	Remove anonymous users? n
 	Disallow root login remotely? n
 	Remove test database and access to it? n
@@ -159,8 +159,8 @@ The datasouce is defined in context.xml in src/webapp/META-INF
  	</code></pre>
 1. Run the following databse scripts
 	<pre><code>
-	mysql -u root -pp@ssW0rd1 < mysql-01.sql
-	mysql -u root -pp@ssW0rd1 < mysql-02.sql
-	mysql -u root -pp@ssW0rd1 < mysql-03.sql
+	mysql -u root -pWelcome1! < mysql-01.sql
+	mysql -u root -pWelcome1! < mysql-02.sql
+	mysql -u root -pWelcome1! < mysql-03.sql
  	</code></pre>
 
