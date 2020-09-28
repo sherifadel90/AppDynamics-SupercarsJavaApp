@@ -14,6 +14,7 @@ In this exercise you will perform the following tasks:
 ## Enable all HTTP Data Collectors
 
 Initially we can Capture all HTTP Data Collectors to find out what would be the useful parameters that we can capture into Analytics and use it in our Dashboards
+Note: This step is strongly recommended on UAT environemnt, not production.
 
 1.	Select the Applications tab at the top left of the screen.
 2.	Select SuperCars Application
@@ -24,8 +25,17 @@ Initially we can Capture all HTTP Data Collectors to find out what would be the 
 
 ![HTTPDataCollectors 1](assets/images/06-http-data-collectors-03.png)
 
+We will configure an HTTP Data Collector to capture all HTTP Parameters. We will only enable it on Transaction Snapshots to avoid any overheads until we figure out the precise Parameters we will need for Transaction Analytics
+1.	In the Name, specify it as “All HTTP Param”
+2.	Enable Transaction Snapshots
+3.	Do Not Enable Transaction Analytics 
+4.	Click on “ + Add “ in the HTTP Parameters Section
+5.	For the new Parameter, specify “All” as the Display Name, and specify an asterisk “*” in the HTTP Parameter name
+6.	Click on Save and enable on "/Supercar-Trader/sell.do" Transaction
 
-### Linux and Mac OS
+![HTTPDataCollectors 2](assets/images/06-add-all-http-data-collectors-04.png)
+
+### Observe and Select relevant HTTP Data Collectors
 
 1. In a new terminal window, run an `scp` command to upload the Java agent zip file to the `/tmp` directory of the Application VM.
 
