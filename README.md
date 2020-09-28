@@ -26,6 +26,9 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 ### Application Server Setup
 
 1. Have [Git](https://git-scm.com) installed and working
+	<pre><code>
+	sudo yum install git
+ 	</code></pre>
 1. Use Git to obtain the WAR File code
 	<pre><code>
 	cd /opt/appdynamics
