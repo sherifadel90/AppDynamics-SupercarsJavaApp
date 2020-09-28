@@ -117,6 +117,12 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		cd /opt/tomcat/bin/
 		./startup.sh
 		</code></pre>
+	- Open Tomcat URL in the browser to verify its isntallation, go to http://&lt;your-ip-address&gt;:8080/
+		<pre><code>
+		Go to http://{ip-address-or-Hostname}:8080/
+		</code></pre>
+	Open the web broswer type the following URL :
+
 1. Use the Tomcat Manager to deploy the war file
    
    You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below
