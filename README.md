@@ -29,17 +29,17 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 1. Get [Maven](https://maven.apache.org) installed
 	- Create a new Directory "/opt/maven/apache-maven"
 		<pre><code>
- 		sudo  mkdir -p /opt/maven/apache-maven
+ 		sudo  mkdir -p /opt/maven
 		sudo chown -R [your-user]:[your-user] /opt/maven
  		</code></pre>
-	- Install the tar.gz package from the Maven site on your Local System
-	- Copy the tar  file  to your host
+	- Logout, and Install the tar.gz package from the Maven site on your Local System (note to update theversions below based on the  one downloaded)
+	- Copy the tar file  to your host
 		<pre><code>
  		scp -i key.pem apache-maven-3.6.3-bin.tar.gz [your-user]@[ip-address]:/opt/maven/apache-maven
  		</code></pre>
 	- Login back to your host and Unpack the tar file file "/opt/maven/apache-maven/"
 		<pre><code>
- 		tar -C /opt/maven/apache-maven -xvf /opt/maven/apache-maven/apache-maven-3.6.3-bin.tar.gz
+ 		tar -C /opt/maven -xvf /opt/maven/apache-maven-3.6.3-bin.tar.gz
  		</code></pre>
 	- Add the Maven bin directory to your path, e.g. in ".bash_profile" add:
 		<pre><code>
@@ -48,14 +48,15 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		</code></pre>
 		Add then the below:
 		<pre><code>
-		export M2_HOME=/opt/maven/apache-maven
+		export M2_HOME=/opt/maven/apache-maven-3.6.3
  		export M2=$M2_HOME/bin
  		export PATH=$PATH:$M2
  		</code></pre>
-	- Login and out of your shell to get the new path
+	- Logout of your shell and then login  again to get the new path
 	- Test using the command "mvn". This should run Maven and indicate "Build Failure"
 1. Use Git to obtain the source code
 	<pre><code>
+	cd /opt
  	git clone https://github.com/Appdynamics/DevNet-Labs.git
  	</code></pre>
 1. Change to the /applications/Supercar-Trader directory and then execute the following for the build
