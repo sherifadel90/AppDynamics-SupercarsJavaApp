@@ -59,7 +59,7 @@ We will configure again HTTP Data Collector but this time to capture only the us
 
 ![SaveHttpDataCollectors](assets/images/06-save-http-data-collectors-06.png)
 
-### Validate Analytics on HTTP Parameters
+## Validate Analytics on HTTP Parameters
 
 We will validate if the business data was captured by HTTP Data collectors in AppDynamics Analytics
 
