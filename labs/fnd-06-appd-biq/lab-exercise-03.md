@@ -30,7 +30,7 @@ Navigate to the Analytics Configuration
 4.	**Mark the Checkbox** next to the SuperCars Application
 
 
-  ![Download Wizard 1](assets/images/03-download-wizard-01.png)
+  ![Download Wizard 1](assets/images/01-enable-analytics.png)
 
 Select the agent for download.
 1. Click **Databases**.
