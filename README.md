@@ -53,18 +53,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 	- We can download Apache tomcat 9 tar.gz either from its official Web site or using wget command from the terminal.
 	- Install wget  command to  directly downlaod Tomcat on  our host fromt the internet
 		<pre><code>
- 		sudo yum install wget (may vary based on your linux distro)
- 		</code></pre>
-	- Install Tomcat
-		<pre><code>
- 		sudo wget http://www-eu.apache.org/dist/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106.tar.gz
- 		</code></pre>
-	- Run the beneath tar command to extract Apache tomcat 7 under the /opt folder
-		<pre><code>
- 		sudo tar -zxpvf apache-tomcat-7.0.106.tar.gz  -C /usr/local/apache
-		cd /usr/local/apache
-		sudo mv apache-tomcat-7.0.106 apache-tomcat-7
-		sudo chown -R [your-user]:[your-user] /usr/local/apache  (if you are not executing  as the root user)
+ 		sudo yum install tomcat (may vary based on your linux distro)
  		</code></pre>
 	- Before starting the Tomcat Service let’’s first set the required CATALINA_HOME environment variable using below commands :
 		<pre><code>
@@ -72,7 +61,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		source ~/.bashrc
 		</code></pre>
 1. Run Tomcat
-	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
+	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/usr/share/tomcat/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
 		<pre><code>
 		vi /usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml
 		</code></pre>
