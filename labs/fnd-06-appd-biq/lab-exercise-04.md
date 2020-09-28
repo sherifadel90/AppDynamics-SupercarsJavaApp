@@ -38,11 +38,12 @@ We will configure an HTTP Data Collector to capture all HTTP Parameters. We will
 ## Observe and Select relevant HTTP Data Collectors
 
 1. Apply load on the Application, specifically the “SellCar” transaction. Then open one of its snapshots with Full Call Graph, and select the Data Collectors Tab.
-Now all HTTP Parameters are visible. You will find Important Metrics being pulled, like the Colour, Year, Price, etc..
+Now all HTTP Parameters are visible. You will find Important Metrics being pulled, like the Car Proce, Colur, Year, etc..
 
 ![HTTPDataCollectors 2](assets/images/06-view-all-http-data-collectors-05.png)
 
 Note down the exact Parameter names to add them again in the HTTP Parameters list and enable them in Transaction Analytics.
+Once they are noted, delete the “All HTTP Param” Http Data Collector.
 
 ## Capture Business Data in Analytics using HTTP Params
 
@@ -52,11 +53,11 @@ We will configure again HTTP Data Collector but this time to capture only the us
 3.	Enable Transaction Analytics 
 4.	Click on “ + Add “ in the HTTP Parameters Section
 5.	For the new Parameter
-6.	Specify “Car Price” as the Display Name, and specify “price” in the HTTP Parameter name
-7.	Repeat for all the rest of the Car Parameters 
-8.	Click on Save and Enable on SellCar Transaction
+6.	Specify “CarPrice_http” as the Display Name, and specify “carPrice” in the HTTP Parameter name
+7.	Repeat for all the rest of the Car Parameters as shown below
+8.	Click on Save and enable on "/Supercar-Trader/sell.do" Transaction
 
-![HTTPDataCollectors 2](assets/images/06-add-all-http-data-collectors-04.png)
+![HTTPDataCollectors 2](assets/images/06-save-http-data-collectors-06.png)
 
 ### Validate Analytics on HTTP Parameters
 
