@@ -50,15 +50,28 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		OpenJDK 64-Bit Server VM (build 25.265-b01, mixed mode)
  		</code></pre>
 1. Install Tomcat
-	- We can download Apache tomcat 9 tar.gz either from its official Web site or using wget command from the terminal.
-	- Install wget  command to  directly downlaod Tomcat on  our host fromt the internet
+	- We can download Apache tomcat 7 tar.gz either from its official Web site or using wget command from the terminal.
+	- Install wget  command  to  directly download Tomcat on  our host fromt the internet
 		<pre><code>
- 		sudo yum install tomcat (may vary based on your linux distro)
+ 		sudo yum install wget (may vary based on your linux distro)
  		</code></pre>
-	- Then Install  TomCat  Admin Packages, mainly to install the default Tomcat root page (tomcat-webapps), and the Tomcat Web Application Manager and Virtual Host Manager (tomcat-admin-webapps)
+	- Install Tomcat
 		<pre><code>
- 		sudo yum install tomcat-webapps tomcat-admin-webapps  (may vary based on your linux distro)
+ 		sudo wget https://downloads.apache.org/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106.tar.gz
  		</code></pre>
+	- Run the beneath tar command to extract Apache tomcat 9 under the /opt folder
+		<pre><code>
+		sudo mkdir /usr/local/apache
+ 		sudo tar -zxpvf apache-tomcat-7.0.106.tar.gz -C /usr/local/apache
+		cd /usr/local/apache
+		sudo mv apache-tomcat-7.0.106 apache-tomcat-7
+		sudo chown -R [your-user]:[your-user] /usr/local/apache  (if you are not executing  as the root user)
+ 		</code></pre>
+	- Before starting the Tomcat Service let’’s first set the required CATALINA_HOME environment variable using below commands :
+		<pre><code>
+		echo "export CATALINA_HOME='/usr/local/apache/tomcat/'" >> ~/.bashrc
+		source ~/.bashrc
+		</code></pre>
 1. Run Tomcat
 	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/usr/share/tomcat/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
 		<pre><code>
