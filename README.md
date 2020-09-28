@@ -59,8 +59,9 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 	cd /opt
  	git clone https://github.com/sherifadel90/AppDynamics-SupercarsJavaApp.git
  	</code></pre>
-1. Change to the /applications/Supercar-Trader directory and then execute the following for the build
+1. Change to the Supercar-Trader Applicationdirectory and then execute the following for the build
 	<pre><code>
+	cd /opt/AppDynamics-SupercarsJavaApp/Supercar-Trader
 	mvn install
 	</code></pre>
 1. This should run and leave "Supercar-Trader.war" in the "target/" directory
