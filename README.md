@@ -30,12 +30,12 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 	- Create a new Directory "/opt/maven/apache-maven"
 		<pre><code>
  		sudo  mkdir -p /opt/maven/apache-maven
-		sudo chown -R <your-user>:<your-user> /opt/maven
+		sudo chown -R [your-user]:[your-user] /opt/maven
  		</code></pre>
 	- Install the tar.gz package from the Maven site on your Local System
 	- Copy the tar  file  to your host
 		<pre><code>
- 		scp -i key.pem apache-maven-3.6.3-bin.tar.gz <your-user>@<ip-address>:/opt/maven/apache-maven
+ 		scp -i key.pem apache-maven-3.6.3-bin.tar.gz [your-user]@[ip-address]:/opt/maven/apache-maven
  		</code></pre>
 	- Login back to your host and Unpack the tar file file "/opt/maven/apache-maven/"
 		<pre><code>
