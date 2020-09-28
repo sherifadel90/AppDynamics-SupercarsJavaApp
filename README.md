@@ -114,7 +114,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		&lt;!-- User Admin Who can access manager and admin section both --&gt; 
 		&lt;role rolename="admin-gui" />
 		&lt;user username="admin" password="password" roles="admin-gui" /&gt; 
-		&lt;/code></pre>
+		</code></pre>
 	- Start Tomcat
 		<pre><code>
 		cd /opt/tomcat/bin/
