@@ -16,12 +16,12 @@ In this exercise you will perform the following tasks:
 Initially we can Capture all HTTP Data Collectors to find out what would be the useful parameters that we can capture into Analytics and use it in our Dashboards
 Note: This step is strongly recommended on UAT environemnt, not production.
 
-1.	Select the Applications tab at the top left of the screen.
-2.	Select SuperCars Application
-3.	Select the Configuration Left tab.
-4.	Click on the Instrumentation Link.
-5.	Select the Data Collectors tab.
-6.	Click on the Add Button in the HTTP Request Data Collectors
+1.	Select the **Applications** tab at the top left of the screen.
+2.	Select **Supercar-Trader** Application
+3.	Select the **Configuration** Left tab.
+4.	Click on the **Instrumentation** Link.
+5.	Select the **Data Collectors** tab.
+6.	Click on the **Add** Button in the **HTTP Request Data Collectors**
 
 ![HTTPDataCollectors 1](assets/images/06-http-data-collectors-03.png)
 
@@ -37,105 +37,36 @@ We will configure an HTTP Data Collector to capture all HTTP Parameters. We will
 
 ### Observe and Select relevant HTTP Data Collectors
 
-1. In a new terminal window, run an `scp` command to upload the Java agent zip file to the `/tmp` directory of the Application VM.
+1. Apply load on the Application, specifically the “SellCar” transaction. Then open one of its snapshots with Full Call Graph, and select the Data Collectors Tab.
+Now all HTTP Parameters are visible. You will find Important Metrics being pulled, like the Colour, Year, Price, etc..
 
-  ```bash
-  scp /tmp/db-agent-20.4.0.1730.zip centos@application.vm.ip.address:/tmp/
-  ```
+![HTTPDataCollectors 2](assets/images/06-add-all-http-data-collectors-04.png)
 
-  In the example above, the Java agent zip file that you downloaded in the previous exercise is located in the `/tmp` directory of your local desktop. Be sure to edit the command to reflect your own environment.
+Note down the exact Parameter names to add them again in the HTTP Parameters list and enable them in Transaction Analytics.
 
-  - The file name of your Java agent zip file may be slightly different than the one seen in the example.
-  - The `application.vm.ip.address` needs to be replaced with actual IP address of the Application VM.
+### Observe and Select relevant HTTP Data Collectors
+We will configure again HTTP Data Collector but this time to capture only the useful HTTP Parameters, and enable them in Transaction Analytics. 
+1.	In the Name, specify it as “CarDetails”
+2.	Enable Transaction Snapshots
+3.	Enable Transaction Analytics 
+4.	Click on “ + Add “ in the HTTP Parameters Section
+5.	For the new Parameter
+6.	Specify “Car Price” as the Display Name, and specify “price” in the HTTP Parameter name
+7.	Repeat for all the rest of the Car Parameters 
+8.	Click on Save and Enable on SellCar Transaction
 
+![HTTPDataCollectors 2](assets/images/06-add-all-http-data-collectors-04.png)
 
-2. You will be prompted for the password for the Application VM. Enter the password to complete the command.
+### Validate Analytics on HTTP Parameters
 
-3. Open a new terminal window and use SSH to connect to your Application VM. Edit the command to reflect the actual IP Address of the Application VM.
+We will validate if the business data was captured by HTTP Data collectors in AppDynamics Analytics
 
-  ```
-  ssh centos@application.vm.ip.address
-  ```
-
-4. You will be prompted for the password for the Application VM. Enter the password to complete the command.
-
-### Windows
-
-You will need [WinSCP](https://winscp.net/download/WinSCP-5.17.2-Setup.exe) or another SCP client installed to upload the Java agent zip file to the Application VM. WinSCP also includes the SSH client [PuTTY](https://www.putty.org/).
-
-Before you upload the agent file, you will need to add a new site in WinSCP for your Application VM.
-
-1. Enter the IP Address for your Application VM.
-2. Enter the Username for your Application VM.
-3. Enter the Password for your Application VM.
-4. Click the **Save** button.
-
-![WinSCP 1](assets/images/04-winscp-01.png)
-
-When you have added the site, you can log into the Application VM and upload the agent file.
-
-1. In WinSCP, select the new site you created for your Application VM.
-2. Click **Login**.
+1.	Select the Analytics tab at the top left of the screen.
+2.	Select the Searches Left tab and Create a New Drag and Drop Search
+3.	Validate the our Business Parameters appear as a field in the Custom HTTP Request Data
+4.	Validate that the CarPrice Field has Data
 
 ![WinSCP 2](assets/images/04-winscp-02.png)
 
-1. Navigate to the `/tmp` directory and select **Binary** for Transfer Settings.
 
-![WinSCP 3](assets/images/04-winscp-03.png)
-
-1. Navigate to the directory where you downloaded the agent file.
-2. Right-click on the file, and select **Copy**.
-
-![WinSCP 4](assets/images/04-winscp-04.png)
-
-1. Paste the agent zip file into the `/tmp` directory in the WinSCP window by right-clicking on the right pane within WinSCP and selecting **Paste**
-
-![WinSCP 5](assets/images/04-winscp-05.png)
-
-Open an SSH window to your Application VM.
-1. Click the **New Session** tab.
-2. Select the new site you created for your Application VM.
-3. Click the arrow on the right side of the **Login** button and select **Open in PuTTY**
-
-![WinSCP 6](assets/images/04-winscp-06.png)
-
-## Unzip the file into a specific directory on the file system
-
-1. Create the directory structure where you will unzip the Java agent zip file.
-
-  ```
-  cd /opt/appdynamics
-  mkdir dbagent
-  ```
-  You should now be able to see the new directory structure to which the Database Visibility agent zip file will be copied.
-
-  ![DB Install 1](assets/images/04-dbagent-install-01.png)
-
-1. Copy the Database Visibility agent zip file to the directory and unzip the file. The name of your Database Visibility agent file may be slightly different than the example below.
-
-  ```
-  cp /tmp/db-agent-20.4.0.1730.zip /opt/appdynamics/dbagent/
-  cd /opt/appdynamics/dbagent
-  unzip db-agent-20.4.0.1730.zip
-  ```
-  The results of unzipping the file will be similar to the following image.
-
-  ![DB Install 2](assets/images/04-dbagent-install-02.png)
-
-## Start the Database Visibility agent
-
-Start the Database Visibility agent and verify that it started with the following commands:
-
-```
-cd /opt/appdynamics/dbagent
-nohup java -Dappdynamics.agent.maxMetrics=300000 -Ddbagent.name=DBMon-Lab-Agent -jar db-agent.jar &
-ps -ef | grep db-agent
-```
-
-The results should be similar to the following image.
-
-![DB Install 3](assets/images/04-dbagent-install-03.png)
-
-You can read more about installing the AppDynamics Database Visibility agent [here](https://docs.appdynamics.com/display/latest/Overview+of+Database+Visibility) and [here](https://docs.appdynamics.com/display/latest/Install+the+Database+Agent)
-
-**Next**: Configure a Database Collector in the Controller
+**Next**: Configure a Method Invocation Data Collector
