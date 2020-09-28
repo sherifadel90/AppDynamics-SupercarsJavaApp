@@ -27,6 +27,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 
 1. Have [Git](https://git-scm.com) installed and working
 1. Get [Maven](https://maven.apache.org) installed
+<<<<<<< HEAD
 	- Get the tar.gz or zip package from the Maven site
 	- Unpack somewhere on your file system, e.g. "/opt/maven/apache-maven-3.3.9/"
 	- Add the Maven bin directory to your path, e.g. in "vi .bash_profile" add:
@@ -39,6 +40,38 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 	- Test using the command "mvn". This should run Maven and indicate "Build Failure"
 1. Use Git to obtain the source code
 	<pre><code>
+=======
+	- Create a new Directory "/opt/maven/apache-maven"
+		<pre><code>
+ 		sudo  mkdir -p /opt/maven
+		sudo chown -R [your-user]:[your-user] /opt/maven
+ 		</code></pre>
+	- Logout, and Install the tar.gz package from the Maven site on your Local System (note to update theversions below based on the  one downloaded)
+	- Copy the tar file  to your host
+		<pre><code>
+ 		scp -i key.pem apache-maven-3.6.3-bin.tar.gz [your-user]@[ip-address]:/opt/maven/apache-maven
+ 		</code></pre>
+	- Login back to your host and Unpack the tar file file "/opt/maven/apache-maven/"
+		<pre><code>
+ 		tar -C /opt/maven -xvf /opt/maven/apache-maven-3.6.3-bin.tar.gz
+ 		</code></pre>
+	- Add the Maven bin directory to your path, e.g. in ".bash_profile" add:
+		<pre><code>
+ 		cd ~
+		vi .bash_profile 
+		</code></pre>
+		Add then the below:
+		<pre><code>
+		export M2_HOME=/opt/maven/apache-maven-3.6.3
+ 		export M2=$M2_HOME/bin
+ 		export PATH=$PATH:$M2
+ 		</code></pre>
+	- Logout of your shell and then login  again to get the new path
+	- Test using the command "mvn". This should run Maven and indicate "Build Failure"
+1. Use Git to obtain the source code
+	<pre><code>
+	cd /opt
+>>>>>>> 835c84f5f094f0e7cf7bf72ff0f3190356cb55f7
  	git clone https://github.com/Appdynamics/DevNet-Labs.git
  	</code></pre>
 1. Change to the /applications/Supercar-Trader directory and then execute the following for the build
