@@ -148,6 +148,8 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
    	- The context path of a web application defines the URL that end users will access the application from. So we will add "/Supercar-Trader" where pur  application can be accessed from a URL like http://{ip-address-or-Hostname}:8080/Supercar-Trader.
 	- in the WAR directory,  we  will  add the WAR file we  generated  from  the Maven Build,  which should be located at "/opt/AppDynamics-SupercarsJavaApp/Supercar-Trader/target"
 	-  Click  Deploy
+	 ![image](doc-images/Tomcat-WAR-Deployment.png)
+	
    
    
    You can either upload the war file through the Tomcat Manager web page or copy the war file to your Tomcat host and and enter the context path and path to the war file as in the example below
