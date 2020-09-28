@@ -69,11 +69,11 @@ The datasouce is defined in context.xml in src/webapp/META-INF
  		</code></pre>
 	- Before starting the Tomcat Service let’’s first set the required CATALINA_HOME environment variable using below commands :
 		<pre><code>
-		echo "export CATALINA_HOME='/usr/local/apache/tomcat/'" >> ~/.bashrc
+		echo "export CATALINA_HOME='/usr/local/apache/apache-tomcat-7/'" >> ~/.bashrc
 		source ~/.bashrc
 		</code></pre>
 1. Run Tomcat
-	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/usr/share/tomcat/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
+	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
 		<pre><code>
 		sudo vi /usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml
 		</code></pre>
@@ -88,32 +88,12 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 		</code></pre>
 	- Start Tomcat
 		<pre><code>
-		sudo systemctl start tomcat
-		</code></pre>
-		And enable Tomcat to automatically start if the server is rebooted:
-		<pre><code>
-		sudo systemctl enable tomcat
+		/usr/local/apache/apache-tomcat-7/bin/startup.sh
 		</code></pre>
 	- Open Tomcat URL in the browser to verify its isntallation
 		<pre><code>
 		Go to http://{ip-address-or-Hostname}:8080/
 		</code></pre>
-
-### Application Deployment
-1. Use the Tomcat Manager to deploy the war file
-   - Go to Tomcat GUI at http://{ip-address-or-Hostname}:8080/
-   - Click  on Manager App button on the right where  you'll be prompted to enter the Manager Credentails that we added in the “/usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml” file  
-   ![image](doc-images/Tomcat-Homepage.png)
-   - To Deploy an Applicationn, You can either upload the WAR file through the Tomcat Manager web page or specify the path of the WAR file if it exists on Tomcat host
-   - Since we've built our WAR file and it already  exists on the Server, we will use the second approach: 
-   	- Scroll
-		 - Scroll Down to the "Deploy directory or WAR file located on server" Section
-		 - Contect Path: Defines the URL that end users will access the application from. So we will add "/Supercar-Trader" where our application can be accessed from a URL like http://{ip-address-or-Hostname}:8080/Supercar-Trader
-		 - WAR or Directory Path: THe path of WAR file we generated from the Maven Build, which should be located at "/opt/appdynamics/DevNet-Labs/applications/Supercar-Trader/Supercar-Trader.war"
-	-  Click  Deploy
-	 ![image](doc-images/Tomcat-WAR-Deployment.png)
-	
-1. Now the app is available on "http://{ip-address-or-Hostname}:8080/Supercar-Trader" on your Tomcat instance
 
 ### Database Setup
 1. Install MySQL 5.7 Community Version
@@ -176,4 +156,20 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 	mysql -u root -pWelcome1! < mysql-02.sql
 	mysql -u root -pWelcome1! < mysql-03.sql
  	</code></pre>
+	
+### Application Deployment
+1. Use the Tomcat Manager to deploy the war file
+   - Go to Tomcat GUI at http://{ip-address-or-Hostname}:8080/
+   - Click  on Manager App button on the right where  you'll be prompted to enter the Manager Credentails that we added in the “/usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml” file  
+   ![image](doc-images/Tomcat-Homepage.png)
+   - To Deploy an Applicationn, You can either upload the WAR file through the Tomcat Manager web page or specify the path of the WAR file if it exists on Tomcat host
+   - Since we've built our WAR file and it already  exists on the Server, we will use the second approach: 
+   	- Scroll
+		 - Scroll Down to the "Deploy directory or WAR file located on server" Section
+		 - Contect Path: Defines the URL that end users will access the application from. So we will add "/Supercar-Trader" where our application can be accessed from a URL like http://{ip-address-or-Hostname}:8080/Supercar-Trader
+		 - WAR or Directory Path: THe path of WAR file we generated from the Maven Build, which should be located at "/opt/appdynamics/DevNet-Labs/applications/Supercar-Trader/Supercar-Trader.war"
+	-  Click  Deploy
+	 ![image](doc-images/Tomcat-WAR-Deployment.png)
+	
+1. Now the app is available on "http://{ip-address-or-Hostname}:8080/Supercar-Trader" on your Tomcat instance
 
