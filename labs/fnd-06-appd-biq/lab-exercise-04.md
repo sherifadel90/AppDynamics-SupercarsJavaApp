@@ -57,7 +57,7 @@ We will configure again HTTP Data Collector but this time to capture only the us
 7.	Repeat for all the rest of the Car Parameters as shown below
 8.	Click on Save and enable on "/Supercar-Trader/sell.do" Transaction
 
-![HTTPDataCollectors 2](assets/images/06-save-http-data-collectors-06.png)
+![SaveHttpDataCollectors](assets/images/06-save-http-data-collectors-06.png)
 
 ### Validate Analytics on HTTP Parameters
 
@@ -68,7 +68,7 @@ We will validate if the business data was captured by HTTP Data collectors in Ap
 3.	Validate the our Business Parameters appear as a field in the Custom HTTP Request Data
 4.	Validate that the CarPrice Field has Data
 
-![WinSCP 2](assets/images/04-winscp-02.png)
+![ValidateHttpDataCollectors](assets/images/06-validate-http-data-collectors-07.png)
 
 
 **Next**: Configure a Method Invocation Data Collector
