@@ -30,7 +30,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 	- Create a new Directory "/opt/maven/apache-maven"
 		<pre><code>
  		sudo  mkdir -p /opt/maven
-		sudo chown -R [your-user]:[your-user] /opt/maven
+		sudo chown -R [your-user]:[your-user] /opt/maven  (if you are not executing  as the root user)
  		</code></pre>
 	- Logout, and Install the tar.gz package from the Maven site on your Local System (note to update theversions below based on the  one downloaded)
 	- Copy the tar file  to your host
@@ -61,6 +61,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
  	</code></pre>
 1. Change to the Supercar-Trader Applicationdirectory and then execute the following for the build
 	<pre><code>
+	sudo chown -R [your-user]:[your-user] /opt/AppDynamics-SupercarsJavaApp  (if you are not executing  as the root user)
 	cd /opt/AppDynamics-SupercarsJavaApp/Supercar-Trader
 	mvn install
 	</code></pre>
