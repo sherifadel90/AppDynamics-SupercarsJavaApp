@@ -91,20 +91,20 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
  		</code></pre>
 	- Run the beneath tar command to extract Apache tomcat 9 under the /opt folder
 		<pre><code>
- 		sudo tar -zxpvf apache-tomcat-9.0.38.tar.gz  -C /opt/
-		cd /opt/
+ 		sudo tar -zxpvf apache-tomcat-9.0.38.tar.gz  -C /usr/local/apache
+		cd /usr/local/apache
 		sudo mv apache-tomcat-9.0.38 tomcat
-		sudo chown -R [your-user]:[your-user] /opt/tomcat  (if you are not executing  as the root user)
+		sudo chown -R [your-user]:[your-user] /usr/local/apache  (if you are not executing  as the root user)
  		</code></pre>
 	- Before starting the Tomcat Service let’’s first set the required CATALINA_HOME environment variable using below commands :
 		<pre><code>
-		echo "export CATALINA_HOME='/opt/tomcat/'" >> ~/.bashrc
+		echo "export CATALINA_HOME='/usr/local/apache/tomcat/'" >> ~/.bashrc
 		source ~/.bashrc
 		</code></pre>
 1. Run Tomcat
-	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/opt/tomcat/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
+	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/usr/local/apache/tomcat/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
 		<pre><code>
-		vi /opt/tomcat/conf/tomcat-users.xml
+		vi /usr/local/apache/tomcat/conf/tomcat-users.xml
 		</code></pre>
 		Then add the below just above </tomcat-users> tag to create a User Admin Who can access manager and admin section both
 		<pre><code>
@@ -117,7 +117,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 		</code></pre>
 	- By default, Tomcat manager is configured to be accessed from the same server where it’s installed. If you access manager, you will get 403 error, so For a manager to be accessible from any host/IP, you need to do the following:
 		<pre><code>
-		vi /opt/tomcat/webapps/manager/META-INF/context.xml
+		vi /usr/local/apache/tomcat/webapps/manager/META-INF/context.xml
 		</code></pre>
 		Then comment the Valve Tag to be  similar  to  the below
 		<pre><code>
@@ -141,7 +141,7 @@ This app uses [Maven](https://maven.apache.org) for the build. To get a build en
 
 1. Use the Tomcat Manager to deploy the war file
    - Go to Tomcat GUI at http://{ip-address-or-Hostname}:8080/
-   - Click  on Manager App button on the right where  you'll be prompted to enter the Manager Credentails that we added in the “/opt/tomcat/conf/tomcat-users.xml” file  
+   - Click  on Manager App button on the right where  you'll be prompted to enter the Manager Credentails that we added in the “/usr/local/apache/tomcat/conf/tomcat-users.xml” file  
    ![image](doc-images/Tomcat-Homepage.png)
    - To Deploy an Applicationn, You can either upload the WAR file through the Tomcat Manager web page or specify the path of the WAR file if it exists on Tomcat host
    - Since we've built our WAR file and it already  exists on the Server, we will use the second approach: 
