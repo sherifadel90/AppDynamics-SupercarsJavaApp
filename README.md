@@ -75,7 +75,7 @@ The datasouce is defined in context.xml in src/webapp/META-INF
 1. Run Tomcat
 	- By default no user or account is allowed to access Manager GUI Page and Admin Page. So to grant access to the users add the following lines in the file “/usr/share/tomcat/conf/tomcat-users.xml” at the end just above </tomcat-users> tag
 		<pre><code>
-		sudo vi /usr/share/tomcat/conf/tomcat-users.xml
+		sudo vi /usr/local/apache/apache-tomcat-7/conf/tomcat-users.xml
 		</code></pre>
 		Then add the below just above </tomcat-users> tag to create a User Admin Who can access manager and admin section both
 		<pre><code>
