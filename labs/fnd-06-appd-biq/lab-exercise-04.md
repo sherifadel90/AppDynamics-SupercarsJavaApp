@@ -35,16 +35,17 @@ We will configure an HTTP Data Collector to capture all HTTP Parameters. We will
 
 ![HTTPDataCollectors 2](assets/images/06-add-all-http-data-collectors-04.png)
 
-### Observe and Select relevant HTTP Data Collectors
+## Observe and Select relevant HTTP Data Collectors
 
 1. Apply load on the Application, specifically the “SellCar” transaction. Then open one of its snapshots with Full Call Graph, and select the Data Collectors Tab.
 Now all HTTP Parameters are visible. You will find Important Metrics being pulled, like the Colour, Year, Price, etc..
 
-![HTTPDataCollectors 2](assets/images/06-add-all-http-data-collectors-04.png)
+![HTTPDataCollectors 2](assets/images/06-view-all-http-data-collectors-05.png)
 
 Note down the exact Parameter names to add them again in the HTTP Parameters list and enable them in Transaction Analytics.
 
-### Observe and Select relevant HTTP Data Collectors
+## Capture Business Data in Analytics using HTTP Params
+
 We will configure again HTTP Data Collector but this time to capture only the useful HTTP Parameters, and enable them in Transaction Analytics. 
 1.	In the Name, specify it as “CarDetails”
 2.	Enable Transaction Snapshots
