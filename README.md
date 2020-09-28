@@ -31,6 +31,8 @@ The datasouce is defined in context.xml in src/webapp/META-INF
  	</code></pre>
 1. Use Git to obtain the WAR File code
 	<pre><code>
+	sudo mkdir appdynamics
+	sudo chown -R [your-user]:[your-user] /opt/appdynamics  (if you are not executing  as the root user)
 	cd /opt/appdynamics
  	git clone https://github.com/Appdynamics/DevNet-Labs.git
  	</code></pre>
