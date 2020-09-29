@@ -8,9 +8,9 @@ In this exercise, We will be working through a few of the Useful Dashboard Compo
 Benefits:
 1.	Very Flexible
 2.	Can generate, Numeric, Timeseries, Pie charts, etc.. 
-3.	Based on AD Query Language 
+3.	Based on AppDynamics "AD" Query Language 
 
-###Bar Charts
+### Bar Charts
 •	Visualizing Top 5 Impacted Car Manufacturers 
 1.	Filter by Application Name
 2.	Select one or more Business Transactions
@@ -19,7 +19,7 @@ Benefits:
 5.	Add in the X-AXIS the Customer Email
 6.	Bonus Point: Add in the X-AXIS the Customer Type
 
-###Pie Charts
+### Pie Charts
 
 ## User Journeys
 
