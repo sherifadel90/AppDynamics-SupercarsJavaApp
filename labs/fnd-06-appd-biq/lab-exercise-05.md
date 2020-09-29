@@ -76,6 +76,49 @@ What we observed that Save Car method takes a Complex Object as an Input Paramet
 2. Click on **Apply** Button, to search for that Class Methods
 3. Once the Results Appear, **Expand “supercars.form.CarForm” Class matching the search**
 4. Look for **Getters Methods** that would return the car details that we are looking for, you’ll find getters for Price, Model, Color, etc.. 
- ![OpenDiscoverySession](assets/images/06-method-drill-down-05.png)
+ ![OpenDiscoverySession](assets/images/06-object-drill-down-06.png)
+
+## Create Method Invocation Data Collector
+
+With the above findings, we can now configure a MI Data Collector to pull the Car Details directly from the running code in runtime. 
+
+1.	Select the Applications tab at the top left of the screen.
+2.	Select SuperCars Application
+3.	Select the Configuration Left tab.
+4.	Click on the Instrumentation Link.
+5.	Select the Data Collectors tab.
+6.	Click on the Add Button in the Method Invocation Data Collectors
+ 
+We will create a Method Invocation Data Collector to capture the Car Details
+1.	In the Name, specify it as “SellCarMI”
+2.	Enable Transaction Snapshots
+3.	Enable Transaction Analytics 
+4.	Select with a Class Name that 
+5.	Add “supercars.dataloader.CarDataLoader” as the Class Name
+6.	Add “saveCar” as the Method Name
+ 
+Then as observed, the Input Parameter of Index 0 in SaveCar Method was an on Object of Class “CarForm”, and then there is a Getter Method inside that object that returns the Car Details properties such as “getPrice()”.
+
+So to explain that how we fetched that value in the MIDC, we will do the below:
+
+1.	Scroll Down and Click on “Add” to specify a new Data to collect
+ 
+2.	In the Display Name, specify “CarPrice”
+3.	In the Collect Data From, select Method Parameter of Index 0, which is our CarForm Object
+4.	Then Operation on Parameter, select Use Getter Chain as we will be calling a Method inside CarForm to return the Car Details
+5.	Then specify getPrice() which is the Getter method inside CarForm Class to return the price
+6.	Repeat the above steps for all the properties (Colour, Model, etc..)
+7.	Click on Save
+8.	Apply on SellCar Business Transaction
+ 
+## Validate Analytics on MD Parameters
+
+We will validate if the business data was captured by HTTP Data collectors in AppDynamics Analytics
+
+1.	Select the Analytics tab at the top left of the screen.
+2.	Select the Searches Left tab and Create a New Drag and Drop Search
+3.	Validate the our Business Parameters appear as a field in the Custom Method Data
+4.	Validate that the CarPrice Field has Data
+
 
 **Next**: Understand Dashboard Components
