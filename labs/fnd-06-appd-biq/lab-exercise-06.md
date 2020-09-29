@@ -40,7 +40,7 @@ For now, we will cover Bar and Pie Charts.
 4. Add “CarPrice_MIDC" in the Y-Axis, notice that SUM is the Aggregation used to capture the total Price per Model
 5. Change  the Font Color to Red to better present it.
 5. Click on Save
-![NumericChartWidget](06-numeric-chart-widget-08.png)
+![NumericChartWidget](assets/images/06-numeric-chart-widget-08.png)
 
 Note that we could do the same for the $ Amount Transacted Succesfully by changingn the User Experience filter to only include NORMAL, SLOW and VERY SLOW.
 
