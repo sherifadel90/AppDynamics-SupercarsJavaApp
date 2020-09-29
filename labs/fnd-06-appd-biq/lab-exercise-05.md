@@ -55,18 +55,16 @@ If we don’t have the assistance from an Application Developer to identify this
 2.	Select the **Web-Portal Node** in the Pop-up windows (It should be the same Node that the Method we are investigating runs on)
 ![OpenDiscoverySession](assets/images/06-start-discovery-session-04.png)
 
-1.	Select Tools on the right toggle 
-
+3.	Select Tools on the right toggle 
 4.	Select Classes/Methods in the Drop Down List.
 5.	Select Classes with name that contains in the Search for section.
-6.	Type in the Class Name “supercars.dataloader.CarDataLoader” in the Text Box
+6.	Type in the Class Name “supercars.dataloader.CarDataLoader” in the Text Box.
 7.	Click on Apply Button, to search for that Class Methods
-8.	Once the Results Appear, Expand the Class matching your search
+8.  Once the Results Appear, Expand the Class matching your search
 9.	Look for the same Method that we noted earlier which is “saveCar”
 ![OpenDiscoverySession](assets/images/06-method-drill-down-05.png)
 
 Note that the saveCar method takes a "CarForm" Object as an input parameter.
-
 
 
 **Next**: Understand Dashboard Components
