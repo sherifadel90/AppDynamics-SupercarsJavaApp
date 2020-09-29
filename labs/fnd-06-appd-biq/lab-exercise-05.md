@@ -76,7 +76,7 @@ What we observed that Save Car method takes a Complex Object as an Input Paramet
 2. Click on **Apply** Button, to search for that Class Methods
 3. Once the Results Appear, **Expand “supercars.form.CarForm” Class matching the search**
 4. Look for **Getters Methods** that would return the car details that we are looking for, you’ll find getters for Price, Model, Color, etc.. 
- ![OpenDiscoverySession](assets/images/06-object-drill-down-06.png)
+ ![ObjectDrillDown](assets/images/06-object-drill-down-06.png)
 
 ## Create Method Invocation Data Collector
 
