@@ -66,5 +66,16 @@ If we don’t have the assistance from an Application Developer to identify this
 
 Note that the saveCar method takes a "CarForm" Object as an input parameter.
 
+## Drill Down to the Object
+
+Now we have reached the method, let’s explore its parameters to find out where we can pull the Car Details properties.
+
+What we observed that Save Car method takes a Complex Object as an Input Parameter "CarForm", where this Object will hold the form data that was filled in the Application Webpage, next we need to inspect that Object and find out how we can pull the Car Details from it.
+
+1. Type in the Class Name of the Input Object **“supercars.form.CarForm”** in the Text Box
+2. Click on **Apply** Button, to search for that Class Methods
+3. Once the Results Appear, **Expand “supercars.form.CarForm” Class matching the search**
+4. Look for **Getters Methods** that would return the car details that we are looking for, you’ll find getters for Price, Model, Color, etc.. 
+ ![OpenDiscoverySession](assets/images/06-method-drill-down-05.png)
 
 **Next**: Understand Dashboard Components
