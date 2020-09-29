@@ -54,7 +54,7 @@ Bonus Point: This Chart Type Can be utilised based on your need, to group in the
 5.	Click on Save
 ![BarChartWidget](assets/images/06-bar-chart-widget-04.png)
 
-Bonus Point: This Chart Type Can be utilised based on your need, to group in the X-AXIS by Customer Type, Company, Organization or any other relevant grouping if exists, below  are  some inspirations
+**Bonus Point:** This Chart Type Can be utilised based on your need, to group in the X-AXIS by Customer Type, Company, Organization or any other relevant grouping if exists, below  are  some inspirations
 ![BarChartSamples](assets/images/06-bar-chart-widget-samples-05.png)
 
 
