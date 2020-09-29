@@ -103,27 +103,31 @@ Then as observed, the Input Parameter of Index 0 in SaveCar Method was an on Obj
 
 So to explain that how we fetched that value in the MIDC, we will do the below:
 
-1.	Scroll Down and Click on “Add” to specify a new Data to collect
-![MIDCDataCollector](assets/images/06-midc-data-collection-09-01.png)
-2.	In the Display Name, specify “CarPrice_MIDC”
-3.	In the Collect Data From, select Method Parameter of Index 0, which is our CarForm Object
-4.	Then Operation on Parameter, select Use Getter Chain as we will be calling a Method inside CarForm to return the Car Details
-5.	Then specify getPrice() which is the Getter method inside CarForm Class to return the price
-6.	Click on Save
+1.	Scroll Down and Click on **“Add” to specify a new Data to collect**
+2.	In the **Display Name**, specify **“CarPrice_MIDC”**
+3.	In the Collect Data From, select **Method Parameter of Index 0**, which is our **CarForm Object**
+4.	Then **Operation on Parameter**, select **Use Getter Chain** as we will be calling a Method inside CarForm to return the Car Details
+5.	Then specify **getPrice()** which is the Getter method inside CarForm Class to return the price
+6.	Click on **Save**
  ![MIDCDataCollector](assets/images/06-midc-data-collection-09.png)
-7.	Repeat the above steps for all the properties (Color, Model, etc..)
+7.	Repeat the above steps for **all the properties** (Color, Model, etc..)
 ![MIDCDataCollector](assets/images/06-midc-all-data-collection-10.png)
-8.	Save MIDC, and Apply on "/Supercar-Trader/sell.do" Business Transaction
+8.	**Save MIDC**, and Apply on **"/Supercar-Trader/sell.do" Business Transaction**
  
  
 ## Validate Analytics on MD Parameters
 
-We will validate if the business data was captured by HTTP Data collectors in AppDynamics Analytics
+Go to the  Website, and apply some manual load on the Sell Car Page by submittinng  the form couple of times.
+Then, We will validate if the business data was captured by HTTP Data collectors in AppDynamics Analytics
 
-1.	Select the Analytics tab at the top left of the screen.
-2.	Select the Searches Left tab and Create a New Drag and Drop Search
-3.	Validate the our Business Parameters appear as a field in the Custom Method Data
-4.	Validate that the CarPrice Field has Data
+1.	Select the **Analytics** tab at the top left of the screen.
+2.	Select the **Searches** Left tab and Create a **New Drag and Drop Search**
+3.	Validate the our **Business Parameters** appear as a field in the **Custom Method Data**
+4.	Validate that the **CarPrice Field** has Data
+![MIDCDataCollector](assets/images/06-validate-MIDC-11.png)
 
+## Conclusion
+
+Now We have captured the Business Data from the Sell Car Trasnaction during from the Dode at Runtime, which  can be utilised in the Analytical and Dashboard features within APpDynamics to provide more context to the business and measure IT Impact on Business
 
 **Next**: Understand Dashboard Components
