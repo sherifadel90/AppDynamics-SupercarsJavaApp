@@ -36,8 +36,8 @@ For now, we will cover Bar and Pie Charts.
  **Exercise:** Visualizing Top Impacted Car Models, where we will have a Bar Chart, showing the Car Models of all of the SellCar Trasnactions, categorised by the User Experience
 1.	Select "Bar" from the Chart Types on the right
 2.	Add a filter on the "/Supercar-Trader/sell.do" Business Transactions
-3.	Add by “CarModel_MIDC" in the X-Axis
-4.	Add by “User Experience" in the X-Axis
+3.	Add “CarModel_MIDC" in the X-Axis
+4.	Add “User Experience" in the X-Axis
 5.	Click on Save
 ![BarChartWidget](assets/images/06-bar-chart-widget-04.png)
 
@@ -49,8 +49,8 @@ Bonus Point: This Chart Type Can be utilised based on your need, to group in the
 **Exercise:** Visualizing $ Sold by Car Models, where we will have a Pie Chart, showing the Car Models of all of the SellCar Trasnactions, and the sum of Prices per Model to know the most  Demanded Car Model on the Application, now that is defiently a Business View
 1.	Select "Pie" from the Chart Types on the right
 2.	Add a filter on the "/Supercar-Trader/sell.do" Business Transactions
-3.	Add by “CarModel_MIDC" in the X-Axis
-4.	Add by “CarPirce_MIDC" in the Y-Axis
+3.	Add “CarModel_MIDC" in the X-Axis
+4.	Add “CarPrice_MIDC" in the Y-Axis
 5.	Click on Save
 ![PieChartWidget](assets/images/06-pie-chart-widget-06.png)
 
