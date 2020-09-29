@@ -10,7 +10,7 @@ In this exercise, We will be working through a few of the Useful Dashboard Compo
 3. In the Popup Window, Type the Dashbaord Name
 4. In the Popup Window, select **Absolute** as the **Canvas Type**
 5. Click **Ok**
-![WinSCP 1](assets/images/06-new-dashboard-01.png)
+![NewDashboard](assets/images/06-new-dashboard-01.png)
 
 Now Open the newly created  empty  Dashboard and let's start adding various widget types.
 
@@ -25,7 +25,7 @@ Now, let's start Creating one
 2. Click on **Add Widget** Button
 3. In the Popup Window, Select the **Analytics** Tab  on the left
 4. Then Click on **Custom Widget Builder**
-![WinSCP 1](assets/images/06-custom-widget-02.png)
+![NewCustomWidgetBuilder](assets/images/06-custom-widget-02.png)
 
 
 ### Bar Charts Type
