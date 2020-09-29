@@ -32,6 +32,23 @@ Once opened,  you'll notice that there are various type of Chart  Types that we 
 
 For now, we will cover Bar and Pie Charts.
 
+### Numeric Type
+ **Exercise:** Quantifying the $ Amount Impacted due to Errors is significant to every Application Owner, Where we can show the Customer how much his  IT have Impacted the business revnue and tthus resulting in money/profit loss
+1. Select "Numeric" from the Chart Types on the right
+2. Add a filter on the "/Supercar-Trader/sell.do" Business Transactions
+3. Add a filter on the "Error" User Experience to show what was impacted due to Errors
+4. Add “CarPrice_MIDC" in the Y-Axis, notice that SUM is the Aggregation used to capture the total Price per Model
+5. Change  the Font Color to Red to better present it.
+5. Click on Save
+![BarChartWidget](06-numeric-chart-widget-08.png)
+
+Note that we could do the same for the $ Amount Transacted Succesfully by changingn the User Experience filter to only include NORMAL, SLOW and VERY SLOW.
+
+Bonus Point: We could baseline this Metric by Creating a Custom Metric in the Analytics Module, and defining a Health Rule to represent if the $ Amount Impacted is as expected or even  higher than the  norm (versus the Baseline).
+Also it  will always be nice to add a Label for the Currency.
+![BarChartSamples](assets/images/06-numeric-chart-widget-samples-09.png)
+
+
 ### Bar Charts Type
  **Exercise:** Visualizing Top Impacted Car Models, where we will have a Bar Chart, showing the Car Models of all of the SellCar Trasnactions, categorised by the User Experience
 1.	Select "Bar" from the Chart Types on the right
@@ -50,7 +67,7 @@ Bonus Point: This Chart Type Can be utilised based on your need, to group in the
 1.	Select "Pie" from the Chart Types on the right
 2.	Add a filter on the "/Supercar-Trader/sell.do" Business Transactions
 3.	Add “CarModel_MIDC" in the X-Axis
-4.	Add “CarPrice_MIDC" in the Y-Axis
+4.	Add “CarPrice_MIDC" in the Y-Axis, notice that SUM is the Aggregation used to capture the total Price per Model
 5.	Click on Save
 ![PieChartWidget](assets/images/06-pie-chart-widget-06.png)
 
