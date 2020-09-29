@@ -104,16 +104,16 @@ Then as observed, the Input Parameter of Index 0 in SaveCar Method was an on Obj
 So to explain that how we fetched that value in the MIDC, we will do the below:
 
 1.	Scroll Down and Click on “Add” to specify a new Data to collect
-[Image]
+![MIDCDataCollector](assets/images/06-midc-data-collection-09-01.png)
 2.	In the Display Name, specify “CarPrice_MIDC”
 3.	In the Collect Data From, select Method Parameter of Index 0, which is our CarForm Object
 4.	Then Operation on Parameter, select Use Getter Chain as we will be calling a Method inside CarForm to return the Car Details
 5.	Then specify getPrice() which is the Getter method inside CarForm Class to return the price
 6.	Click on Save
- ![MIDCDataCollector](assets/images/06-midc-data-collection-9.png)
+ ![MIDCDataCollector](assets/images/06-midc-data-collection-09.png)
 7.	Repeat the above steps for all the properties (Color, Model, etc..)
 ![MIDCDataCollector](assets/images/06-midc-all-data-collection-10.png)
-8.	Save MIDC, and Apply on "/Supercar-Trader/Sell.do" Business Transaction
+8.	Save MIDC, and Apply on "/Supercar-Trader/sell.do" Business Transaction
  
  
 ## Validate Analytics on MD Parameters
