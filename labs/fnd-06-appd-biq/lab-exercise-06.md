@@ -30,7 +30,7 @@ Now, let's start Creating one
 Once opened,  you'll notice that there are various type of Chart  Types that we can create in the Customer Widget Builder, and either by Drag or Drop, or by AD Query in the Advance pane, thus showing the Benefits discussed ealier.
 ![NewCustomWidgetBuilder](assets/images/06-custom-widget-details-03.png)
 
-For now, we will cover Bar and Pie Charts.
+For now, we will cover Numeric, Bar and Pie Charts.
 
 ### Numeric Type
  **Exercise:** Quantifying the $ Amount Impacted due to Errors is significant to every Application Owner, Where we can show the Customer how much his  IT have Impacted the business revnue and tthus resulting in money/profit loss
@@ -75,6 +75,25 @@ Bonus Point: This Chart Type Can be utilised based on your need, to group in the
 ![PieChartSamples](assets/images/06-pie-chart-widget-samples-07.png)
 
 
+## Dashboard Components: Conversion Funnels
+Benefits:
+1. Help visualize the flow of users or events through a multi step process in an application to better understand which steps can be optimized for more successful convergence. 
+2. Tie the IT Perfomance of every Step through a funnel, to understand how it imapcted the user experience and thus was the cause  of Users Drop Offs
+
+Note that the funnel is filtered by the Users who executed this path, not the total visits per step.
+
+### Based on Transactions
+The first step of Funnel Creation is to select a unique identifier of the Transaction that represents every User Navigation through the funnel, mostly the Session Id is the best representation.
+
+1. Click on the drop down for Count Distinct of and select SessionID
+The SessionID persists through each step in the funnel.
+SessionID can be captured automatically or needs to be manually configured depending on the Application Language and Framework
+2. Select the BTs that are executed in this sequence. 
+3. Make sure to select “Show Health” to visualize the BTs Health and how it may affect the Conversion
+
+### Based on Browser Sessions
+Not covered in this course
+
 ## User Journeys
 
-## Conversion Funnels
+## Adding Images
