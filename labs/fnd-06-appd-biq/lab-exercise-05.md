@@ -41,27 +41,27 @@ After Identifying the Method that is responsible for the Save Car Operation, nex
 
 If we don’t have the assistance from an Application Developer to identify this from the source code, there is an approach to discover the Application Methods and Objects directly from AppDynamics.
 
-1.	Select the **Applications** tab at the top left of the screen.
-2.	Select **Supercar-Trader** Application
-3.	Select the **Configuration** Left tab.
-4.	Click on the **Instrumentation** Link.
-5.	Select the **Transaction Detection** Tab.
-6.	Click on the **Live Preview Button** on the Right
+1. Select the **Applications** tab at the top left of the screen.
+2. Select **Supercar-Trader** Application
+3. Select the **Configuration** Left tab.
+4. Click on the **Instrumentation** Link.
+5. Select the **Transaction Detection** Tab.
+6. Click on the **Live Preview Button** on the Right
  ![OpenDiscoverySession](assets/images/06-open-discovery-session-03.png)
  
 ## Discover Method Parameters
 
-1.	Click on **Start Discovery Session Tab** at the top right of the screen
-2.	Select the **Web-Portal Node** in the Pop-up windows (It should be the same Node that the Method we are investigating runs on)
+1. Click on **Start Discovery Session Tab** at the top right of the screen
+2. Select the **Web-Portal Node** in the Pop-up windows (It should be the same Node that the Method we are investigating runs on)
 ![OpenDiscoverySession](assets/images/06-start-discovery-session-04.png)
 
-3.	Select Tools on the right toggle 
-4.	Select Classes/Methods in the Drop Down List.
-5.	Select Classes with name that contains in the Search for section.
-6.	Type in the Class Name “supercars.dataloader.CarDataLoader” in the Text Box.
-7.	Click on Apply Button, to search for that Class Methods
-8.  Once the Results Appear, Expand the Class matching your search
-9.	Look for the same Method that we noted earlier which is “saveCar”
+3. Select Tools on the right toggle 
+4. Select Classes/Methods in the Drop Down List.
+5. Select Classes with name that contains in the Search for section.
+6. Type in the Class Name “supercars.dataloader.CarDataLoader” in the Text Box.
+7. Click on Apply Button, to search for that Class Methods
+8. Once the Results Appear, Expand the Class matching your search
+9. Look for the same Method that we noted earlier which is “saveCar”
 ![OpenDiscoverySession](assets/images/06-method-drill-down-05.png)
 
 Note that the saveCar method takes a "CarForm" Object as an input parameter.
