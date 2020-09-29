@@ -97,7 +97,7 @@ We will create a Method Invocation Data Collector to capture the Car Details
 4.	Select **with a Class Name that**
 5.	Add **“supercars.dataloader.CarDataLoader”** as the **Class Name**
 6.	Add **“saveCar”** as the **Method Name**
- ![MIDCDataCollector](assets/images/06-new-midc-data-collectors-08.png)
+ ![NewMIDCDataCollector](assets/images/06-new-midc-data-collectors-08.png)
  
 Then as observed, the Input Parameter of Index 0 in SaveCar Method was an on Object of Class “CarForm”, and then there is a Getter Method inside that object that returns the Car Details properties such as “getPrice()”.
 
@@ -109,9 +109,9 @@ So to explain that how we fetched that value in the MIDC, we will do the below:
 4.	Then **Operation on Parameter**, select **Use Getter Chain** as we will be calling a Method inside CarForm to return the Car Details
 5.	Then specify **getPrice()** which is the Getter method inside CarForm Class to return the price
 6.	Click on **Save**
- ![MIDCDataCollector](assets/images/06-midc-data-collection-09.png)
+ ![CreateMIDCDataCollector1](assets/images/06-midc-data-collection-09.png)
 7.	Repeat the above steps for **all the properties** (Color, Model, etc..)
-![MIDCDataCollector](assets/images/06-midc-all-data-collection-10.png)
+![CreateMIDCDataCollector2](assets/images/06-midc-all-data-collection-10.png)
 8.	**Save MIDC**, and Apply on **"/Supercar-Trader/sell.do" Business Transaction**
  
  
@@ -124,7 +124,7 @@ Then, We will validate if the business data was captured by HTTP Data collectors
 2.	Select the **Searches** Left tab and Create a **New Drag and Drop Search**
 3.	Validate the our **Business Parameters** appear as a field in the **Custom Method Data**
 4.	Validate that the **CarPrice Field** has Data
-![MIDCDataCollector](assets/images/06-validate-MIDC-11.png)
+![ValidateMIDCDataCollector](assets/images/06-validate-MIDC-11.png)
 
 ## Conclusion
 
