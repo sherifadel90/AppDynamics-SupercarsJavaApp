@@ -27,17 +27,36 @@ Now, let's start Creating one
 4. Then Click on **Custom Widget Builder**
 ![NewCustomWidgetBuilder](assets/images/06-custom-widget-02.png)
 
+Once opened,  you'll notice that there are various type of Chart  Types that we can create in the Customer Widget Builder, and either by Drag or Drop, or by AD Query in the Advance pane, thus showing the Benefits discussed ealier.
+![NewCustomWidgetBuilder](assets/images/06-custom-widget-details-03.png)
+
+For now, we will cover Bar and Pie Charts.
 
 ### Bar Charts Type
- **Exercise:** Visualizing Top 5 Impacted Car Manufacturers 
-1.	Filter by Application Name
-2.	Select one or more Business Transactions
-3.	Filter by “Error” and “Stall” User Experience 
-4.	Select Bar Chart Type
-5.	Add in the X-AXIS the CarManufacturer
-6.	Bonus Point: Can be utilised based on your need, to group in the X-AXIS by Customer Type, Company, Organization if exists
+ **Exercise:** Visualizing Top Impacted Car Models, where we will have a Bar Chart, showing the Car Models of all of the SellCar Trasnactions, categorised by the User Experience
+1.	Select "Bar" from the Chart Types on the right
+2.	Add a filter on the "/Supercar-Trader/sell.do" Business Transactions
+3.	Add by “CarModel_MIDC" in the X-Axis
+4.	Add by “User Experience" in the X-Axis
+5.	Click on Save
+![BarChartWidget](assets/images/06-bar-chart-widget-04.png)
+
+Bonus Point: This Chart Type Can be utilised based on your need, to group in the X-AXIS by Customer Type, Company, Organization or any other relevant grouping if exists, below  are  some inspirations
+![BarChartSamples](assets/images/06-bar-chart-widget-samples-05.png)
+
 
 ### Pie Charts Type
+**Exercise:** Visualizing Top Impacted Car Models, where we will have a Bar Chart, showing the Car Models of all of the SellCar Trasnactions, categorised by the User Experience
+1.	Select "Bar" from the Chart Types on the right
+2.	Add a filter on the "/Supercar-Trader/sell.do" Business Transactions
+3.	Add by “CarModel_MIDC" in the X-Axis
+4.	Add by “User Experience" in the X-Axis
+5.	Click on Save
+![BarChartWidget](assets/images/06-bar-chart-widget-04.png)
+
+Bonus Point: This Chart Type Can be utilised based on your need, to group in the X-AXIS by Customer Type, Company, Organization or any other relevant grouping if exists, below  are  some inspirations
+![BarChartSamples](assets/images/06-bar-chart-widget-samples-05.png)
+
 
 ## User Journeys
 
