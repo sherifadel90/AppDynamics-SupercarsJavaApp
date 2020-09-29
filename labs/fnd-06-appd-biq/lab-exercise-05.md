@@ -20,15 +20,18 @@ In this exercise you will perform the following tasks:
 To  provide a business context  while monitoring our Application, We will discover the Business Data while Selling a Car, like Car Price, Model, etc..
 Therefor we have first to identify the method within the Application Code that will most likely be containing this data
 
-1.	Open one of the "/Supercar-Trader/sell.do" Transaction Snapshots with Full Call Graph
-2.	Drill into the Web-Portal and Expand the Call Graph
-3.	You’ll notice a “saveCar” method being called which is responsible for taking the User Input and saving it to the Database
+1. Open one of the "/Supercar-Trader/sell.do" Transaction Snapshots with Full Call Graph
+2. Drill into the Web-Portal and Expand the Call Graph
+3. You’ll notice a “saveCar” method being called which is responsible for taking the User Input and saving it to the Database
+
 ![DiscoverCallGraphMethods 1](assets/images/06-discover-callgraph-methods-01.png)
 
-4.	Right click on the method, and select “View Details”
-5.	Note down the Full Class Name and the Method Name
-•	Class Name: supercars.dataloader.CarDataLoader
-•	Method Name: saveCar
+4. Right click on the method, and select “View Details”
+5. Note down the Full Class Name and the Method Name
+  ```
+  Class Name: supercars.dataloader.CarDataLoader
+  Method Name: saveCar
+  ```
 ![DiscoverCallGraphMethods 2](assets/images/06-discover-callgraph-methods-02.png)
 
 
