@@ -50,11 +50,13 @@ If we don’t have the assistance from an Application Developer to identify this
  ![OpenDiscoverySession](assets/images/06-open-discovery-session-03.png)
  
 ## Discover Method Parameters
-1.	Click on Start Discovery Session tab at the top left of the screen
-2.  Select the Web-Portal Node in the Pop-up windows (It should be the same Node that the Method we are investigating runs on)
+
+1.	Click on **Start Discovery Session Tab** at the top right of the screen
+2.	Select the **Web-Portal Node** in the Pop-up windows (It should be the same Node that the Method we are investigating runs on)
 ![OpenDiscoverySession](assets/images/06-start-discovery-session-04.png)
 
-3.	Select Tools on the right toggle 
+1.	Select Tools on the right toggle 
+
 4.	Select Classes/Methods in the Drop Down List.
 5.	Select Classes with name that contains in the Search for section.
 6.	Type in the Class Name “supercars.dataloader.CarDataLoader” in the Text Box
