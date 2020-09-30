@@ -84,6 +84,13 @@ Note that the funnel is filtered by the Users who executed this path in that spe
 
 The first step of Funnel Creation is to select a unique identifier of the Transaction that represents every User Navigation through the funnel, mostly the Session Id is the best representation, as The SessionID persists through each step in the funnel.
 
+Now, let's start Creating one
+1. Toggle the **Edit Mode** at the upper left corner of the dashboard
+2. Click on **Add Widget** Button
+3. In the Popup Window, Select the **Analytics** Tab  on the left
+4. Then Click on **Funnel Analysis**
+![NewCustomWidgetBuilder](assets/images/06-create-funnel-widget-12.png)
+
 ### Based on Transactions
 
 Session Id can be captured from the Transactions (if not API based), therefore we'll need to have a Data Collector for the SessionId to use it as a Distinct Count for the Funnel Transactions.
@@ -101,6 +108,8 @@ For Java Applications we can relay on AppDynamics Session Id capturing capabilit
 ![EnableSessionId](assets/images/06-enable-sessionid-11.png)
 
 Now apply some load by navigating multiple times from the /Supercar-Trader/home.do page, then directly navigate to /Supercar-Trader/sell.do page on the Application.
+
+Go back to Creating a new Funnel Analysis Widget
 1. Select **Transactions** from the Drop Down List
 2. In the **Count Distinct of** Select **sessionId** from the Drop Down List
 3. Click on **Add Step**, Name it **"Home Page"**, click on **Add Criteria**, select **Business Transactions**, and then select **/Supercar-Trader/home.do**
