@@ -94,6 +94,3 @@ SessionID can be captured automatically or needs to be manually configured depen
 ### Based on Browser Sessions
 Not covered in this course
 
-## User Journeys
-
-## Adding Images
