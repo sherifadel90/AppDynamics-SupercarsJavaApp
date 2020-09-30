@@ -86,8 +86,18 @@ The first step of Funnel Creation is to select a unique identifier of the Transa
 
 ### Based on Transactions
 
-Session Id can be captured from the Transactions (if not API based), therefore we'll need to have a Data Collector for the SessionId.
-For Java Applications we can relay on AppDynamics Session Id capturing capability in the Default HTTP DataCollector, we'll make sure it  is enabled and apply it to all Business Tranasactions to make sure we apture the SessionId for every Transaction
+Session Id can be captured from the Transactions (if not API based), therefore we'll need to have a Data Collector for the SessionId to use it as a Distinct Count for the Funnel Transactions.
+
+For Java Applications we can relay on AppDynamics Session Id capturing capability in the Default HTTP DataCollector, we'll make sure it is enabled and apply it to all Business Tranasactions to make sure we capture the SessionId for every Transaction
+1. Select the Applications tab at the top left of the screen.
+2. Select Supercar-Trader Application
+3. Select the Configuration Left tab.
+4. Click on the Instrumentation Link.
+5. Select the Data Collectors tab.
+6. Edit the **Default HTTP Request Request Data Collectors**
+7. Check the **Transaction Analytics** Checkbox
+7. Make sure that the **SessionID** Checkbox is marked
+7. Save and Close
 ![EnableSessionId](assets/images/06-enable-sessionid-11.png)
 
 1. Select **Transactions** from the Drop Down List
