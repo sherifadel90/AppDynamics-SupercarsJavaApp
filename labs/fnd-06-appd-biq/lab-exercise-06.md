@@ -82,14 +82,13 @@ Benefits:
 
 Note that the funnel is filtered by the Users who executed this path in that specific order, not the total visits per step.
 
+The first step of Funnel Creation is to select a unique identifier of the Transaction that represents every User Navigation through the funnel, mostly the Session Id is the best representation, as The SessionID persists through each step in the funnel.
+
 ### Based on Transactions
-The first step of Funnel Creation is to select a unique identifier of the Transaction that represents every User Navigation through the funnel, mostly the Session Id is the best representation.
 
-Enable Session Capture
-The SessionID persists through each step in the funnel.
-SessionID can be captured automatically or needs to be manually configured depending on the Application Language and Framework
-
-
+Session Id can be captured from the Transactions (if not API based), therefore we'll need to have a Data Collector for the SessionId.
+For Java Applications we can relay on AppDynamics Session Id capturing capability in the Default HTTP DataCollector, we'll make sure it  is enabled and apply it to all Business Tranasactions to make sure we apture the SessionId for every Transaction
+![EnableSessionId](assets/images/06-enable-sessionid-11.png)
 
 1. Select **Transactions** from the Drop Down List
 2. In the **Count Distinct of** Select **sessionId** from the Drop Down List
@@ -99,5 +98,6 @@ SessionID can be captured automatically or needs to be manually configured depen
 ![FunnelWidget](assets/images/06-funnel-chart-10.png)
 
 ### Based on Browser Sessions
+
 Not covered in this course
 
