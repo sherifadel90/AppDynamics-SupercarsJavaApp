@@ -84,7 +84,7 @@ Note that the funnel is filtered by the Users who executed this path, not the to
 
 ### Based on Transactions
 The first step of Funnel Creation is to select a unique identifier of the Transaction that represents every User Navigation through the funnel, mostly the Session Id is the best representation.
-
+Enable Session Capture
 1. Click on the drop down for Count Distinct of and select SessionID
 The SessionID persists through each step in the funnel.
 SessionID can be captured automatically or needs to be manually configured depending on the Application Language and Framework
