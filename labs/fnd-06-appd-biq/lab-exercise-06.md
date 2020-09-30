@@ -100,6 +100,7 @@ For Java Applications we can relay on AppDynamics Session Id capturing capabilit
 7. Save and Close
 ![EnableSessionId](assets/images/06-enable-sessionid-11.png)
 
+Now apply some load by navigating multiple times from the /Supercar-Trader/home.do page, then directly navigate to /Supercar-Trader/sell.do page on the Application.
 1. Select **Transactions** from the Drop Down List
 2. In the **Count Distinct of** Select **sessionId** from the Drop Down List
 3. Click on **Add Step**, Name it **"Home Page"**, click on **Add Criteria**, select **Business Transactions**, and then select **/Supercar-Trader/home.do**
