@@ -78,18 +78,25 @@ Bonus Point: This Chart Type Can be utilised based on your need, to group in the
 ## Dashboard Components: Conversion Funnels
 Benefits:
 1. Help visualize the flow of users or events through a multi step process in an application to better understand which steps can be optimized for more successful convergence. 
-2. Tie the IT Perfomance of every Step through a funnel, to understand how it imapcted the user experience and thus was the cause  of Users Drop Offs
+2. Tie the IT Perfomance of every Step through a funnel, to understand how it impacted the user experience and thus was the cause of Users Drop Offs
 
-Note that the funnel is filtered by the Users who executed this path, not the total visits per step.
+Note that the funnel is filtered by the Users who executed this path in that specific order, not the total visits per step.
 
 ### Based on Transactions
 The first step of Funnel Creation is to select a unique identifier of the Transaction that represents every User Navigation through the funnel, mostly the Session Id is the best representation.
+
 Enable Session Capture
-1. Click on the drop down for Count Distinct of and select SessionID
 The SessionID persists through each step in the funnel.
 SessionID can be captured automatically or needs to be manually configured depending on the Application Language and Framework
-2. Select the BTs that are executed in this sequence. 
-3. Make sure to select “Show Health” to visualize the BTs Health and how it may affect the Conversion
+
+
+
+1. Select **Transactions** from the Drop Down List
+2. In the **Count Distinct of** Select **sessionId** from the Drop Down List
+3. Click on **Add Step**, Name it **"Home Page"**, click on **Add Criteria**, select **Business Transactions**, and then select **/Supercar-Trader/home.do**
+4. Click on **Add Step**, Name it **"SellCar Page"**, click on **Add Criteria**, select **Business Transactions**, and then select **/Supercar-Trader/sell.do**
+5. Select the **Show Health** Checkbox on the left to visualise the Transactions Health in the Flow Map
+![FunnelWidget](assets/images/06-funnel-chart-10.png)
 
 ### Based on Browser Sessions
 Not covered in this course
