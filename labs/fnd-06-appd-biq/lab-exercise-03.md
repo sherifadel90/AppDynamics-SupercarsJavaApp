@@ -12,7 +12,7 @@ http://IP_OR_FQDN_OF_HOST:8090/controller
 
 Access the controller login screen from your web browser. You should see the login page of the Controller like the image below.
 
-![Controller Login Screen](assets/images/03-controller-login.png)
+![Controller Login Screen](assets/images/02-controller-login.png)
 
 Use the following case-sensitive credentials to login:
 
