@@ -1,0 +1,20 @@
+{
+  "labId": "fnd-05-appd-bt",
+  "title": "Database Visibility Monitoring Fundamentals",
+  "slug": "LAB DESCRIPTION",
+  "time": 45,
+  "byod": true,
+  "active": true,
+  "files": [
+     {"title": "Introduction",
+      "file": "1.md"}
+  ],
+  "tags": [
+	{"title": "AppDynamics"}
+  ],
+  "related": [
+  ],
+  "authors": [
+      {"name": "Sherif Medhat", "email": "sherif.medhat@appdynamics.com"}
+  ]
+}

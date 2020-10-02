@@ -1,0 +1,32 @@
+{
+  "labId": "fnd-06-appd-biq",
+  "title": "FDM REST API 103 Lab",
+  "slug": "FDM API Create Network Objects from CSV file lab",
+  "time": 45,
+  "byod": true,
+  "active": true,
+  "files": [
+     {"title": "BusinessIQ fundamentals",
+      "file": "lab-exercise-01.md"},
+     {"title": "Check the Learning Lab prerequisites",
+      "file": "lab-exercise-02.md"},
+     {"title": "Enable analytics on the application",
+      "file": "lab-exercise-03.md"},
+     {"title": "Configure HTTP data collectors",
+      "file": "lab-exercise-04.md"},
+     {"title": "Configure method invocation data collectors",
+      "file": "lab-exercise-05.md"},
+     {"title": "Dashboard components ",
+      "file": "lab-exercise-06.md"},
+      {"title": "Build your dashboard exercise",
+       "file": "lab-exercise-07.md"}
+  ],
+  "tags": [
+	{"title": "AppDynamics"}
+  ],
+  "related": [
+  ],
+  "authors": [
+      {"name": "Sherif Medhat", "email": "sherif.medhat@appdynamics.com"}
+  ]
+}
