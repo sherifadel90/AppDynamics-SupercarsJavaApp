@@ -1,12 +1,12 @@
 {
   "labId": "fnd-06-appd-biq",
-  "title": "FDM REST API 103 Lab",
-  "slug": "FDM API Create Network Objects from CSV file lab",
+  "title": "BusinessIQ Fundamentals",
+  "slug": "LAB DESCRIPTION",
   "time": 45,
   "byod": true,
   "active": true,
   "files": [
-     {"title": "BusinessIQ fundamentals",
+     {"title": "Introduction",
       "file": "lab-exercise-01.md"},
      {"title": "Check the Learning Lab prerequisites",
       "file": "lab-exercise-02.md"},

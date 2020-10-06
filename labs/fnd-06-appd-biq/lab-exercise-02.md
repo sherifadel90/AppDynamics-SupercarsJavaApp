@@ -6,7 +6,7 @@ In this exercise you will complete the following tasks:
 - Verify transaction load to the application.
 - Restart the application and transaction load if needed.
 
-The Controller can be accessed at a URL similar to the following example. Substitute the IP Address or fully qualified domain name of your Controller VM.
+The Controller can be accessed at a URL similar to the one shown in the following example. Substitute the IP Address or fully qualified domain name of your Controller VM.
 
 Example Controller URL for browser:
 
@@ -73,7 +73,7 @@ If any of the checks you performed in the previous steps could not be verified, 
   sudo netstat -tulpn | grep LISTEN
   ```
 
-You should see output similar to the following image showing that port 8080 is in use by Apache Tomcat.
+You should see output similar to the following example showing that port 8080 is in use by Apache Tomcat.
 
 ![Restart App 1](assets/images/02-restart-app-and-load-01.png)
 
@@ -85,7 +85,7 @@ cd /opt/appdynamics/DevNet-Labs/applications/Load-Generator/phantomjs
 ./stop_load.sh
 ```
 
-You should see output similar to the following image.
+You should see output similar to the following example.
 
 ![Restart App 2](assets/images/02-restart-app-and-load-02.png)
 
@@ -98,7 +98,7 @@ cd /opt/appdynamics/DevNet-Labs/applications/Load-Generator/phantomjs
 ./start_load.sh
 ```
 
-You should see output similar to the following image.
+You should see output similar to the following example.
 
 ![Restart App 3](assets/images/02-restart-app-and-load-03.png)
 
