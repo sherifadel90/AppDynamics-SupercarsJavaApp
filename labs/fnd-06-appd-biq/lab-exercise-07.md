@@ -1,10 +1,10 @@
-# Build your Dashboard Exercise
+# Exercise: Build your dashboard
 
-To conclude this Module, you will have to use the Business Data Captured in the earlier exercise using Method Invocation Data Collectors, along with your understanding of the Dashboard Components to an IT Business Impact Dashboard.
+To conclude this Learning Lab, use the business data that was captured in the earlier exercise using method invocation data collectors and your understanding of the dashboard components to build an IT Business Impact Dashboard.
 
-## Create a Business Dashboard
+Refer to the following example and build your own dashboard, using the same  data and widgets.
 
-Mimic the below Dashboard utilising the Same  Dat and Widgets to conclude the  Module
 ![DiscoverCallGraphMethods 1](assets/images/06-BusinessDashboard-01.png)
 
 
+**Congratulations! You have completed the BusinessIQ Fundamentals Learning Lab!**

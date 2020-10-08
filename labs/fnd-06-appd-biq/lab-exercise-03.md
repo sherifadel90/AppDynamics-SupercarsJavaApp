@@ -2,9 +2,7 @@
 
 In this exercise you will access your AppDynamics Controller from your web browser and enable the Analytics from there.
 
-In the example URL below, substitute the IP Address or fully qualified domain name of your Controller VM.
-
-Example Controller URL for browser:
+Using the example URL below, substitute the IP Address or fully qualified domain name of your Controller VM.
 
 ```
 http://IP_OR_FQDN_OF_HOST:8090/controller
