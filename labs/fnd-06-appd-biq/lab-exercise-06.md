@@ -140,12 +140,17 @@ User Journeys Help us to understand each step health of a Critical Business Jour
 
 Application Owners are the ones who set the requirements of what is the User Journey that is important to visualize, and explain what are the order of the Business  Transactions that are  Journey’s Steps 
 
-So in Summary:
-1. The Journey is a Manual placement of the BTs Health Status Widget in the right order of Execution
-2. Create Business Transaction Health Status Widgets for all the required Steps
+To Create a User Journey:
+1. The Journey is a Manual placement of the Business Transaction Health Status Widget in the right order of Execution
+![HealthStatusWidget1](assets/images/06-HealthStatus-Widget-12.png)
+
+2. Create Business Transaction Health Status Widgets (Pie) for all the required Steps
+![HealthStatusWidget2](assets/images/06-HealthStatus-Widget-13.png)
+
 3. Order the Health Status Widget per the requirements
+
 4. Create Lines connecting the BTs Health Widgets as Transparent Images to Convoy the connection
-![UserJourneySample](assets/images/06-user-journey-sample-12.png)
+![UserJourneySample](assets/images/06-user-journey-sample-14.png)
 
 
 **Next**: Exercise: Build your dashboard
