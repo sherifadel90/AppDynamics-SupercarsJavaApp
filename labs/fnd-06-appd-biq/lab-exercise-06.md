@@ -135,7 +135,17 @@ Return to the funnel analysis widget.
 Not covered in this course
 
 ## User Journeys
-To be Filled
+
+User Journeys Help us to understand each step health of a Critical Business Journey that the Users execute, to determine how healthy the Application is to perform the main intended functionality
+
+Application Owners are the ones who set the requirements of what is the User Journey that is important to visualize, and explain what are the order of the Business  Transactions that are  Journey’s Steps 
+
+So in Summary:
+1. The Journey is a Manual placement of the BTs Health Status Widget in the right order of Execution
+2. Create Business Transaction Health Status Widgets for all the required Steps
+3. Order the Health Status Widget per the requirements
+4. Create Lines connecting the BTs Health Widgets as Transparent Images to Convoy the connection
+![UserJourneySample](assets/images/06-user-journey-sample-12.png)
 
 
 **Next**: Exercise: Build your dashboard
