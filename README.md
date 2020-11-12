@@ -181,5 +181,5 @@ If you  will be proceeding to DevNet Labs, please note the below Differences:
 
 For the Load Generation (Findings by Hakken Team)
 1. Type the below command once before running the Load Generation Script:
-sudo ln -s /opt/appdynamics/platform/product/controller/reporting_service/reports/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs /usr/local/bin/
+**sudo ln -s /opt/appdynamics/platform/product/controller/reporting_service/reports/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs /usr/local/bin/**
 
