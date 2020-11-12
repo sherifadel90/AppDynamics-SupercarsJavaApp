@@ -174,12 +174,12 @@ The datasource is defined in context.xml in src/webapp/META-INF
 1. Now the app is available on "http://{ip-address-or-Hostname}:8080/Supercar-Trader" on your Tomcat instance
 
 ## Considerations
+
 If you  will be proceeding to DevNet Labs, please note the below Differences:
 1. Start Tomcat Command: **/usr/local/apache/apache-tomcat-7/bin/startup.sh** instead of **sudo systemctl start apache-tomcat-7.service**
 1. Stop Tomcat Command: **/usr/local/apache/apache-tomcat-7/bin/shutdown.sh** instead of **sudo systemctl stop apache-tomcat-7.service**
+
 For the Load Generation (Findings by Hakken Team)
-1. sudo ln -s /path/to/phantomjs /usr/local/bin/
-2. /opt/appdynamics/platform/product/controller/reporting_service/reports/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs
-3. sudo chmod 754 /opt/appdynamics/DevNet-Labs/applications/Load-Generator/phantomjs/*.sh
-4. cd /opt/appdynamics/DevNet-Labs/applications/Load-Generator/phantomjs
-5. ./start_load.sh
+1. Type the below command once before running the Load Generation Script:
+sudo ln -s /opt/appdynamics/platform/product/controller/reporting_service/reports/node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs /usr/local/bin/
+
