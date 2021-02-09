@@ -57,7 +57,7 @@ The datasource is defined in context.xml in src/webapp/META-INF
  		</code></pre>
 	- Install Tomcat
 		<pre><code>
- 		sudo wget https://downloads.apache.org/tomcat/tomcat-7/v7.0.106/bin/apache-tomcat-7.0.106.tar.gz
+ 		sudo wget https://downloads.apache.org/tomcat/tomcat-7/v7.0.108/bin/apache-tomcat-7.0.108.tar.gz
  		</code></pre>
 	- Extract Apache Tomcat 7 under the /usr/local/ folder
 		<pre><code>
