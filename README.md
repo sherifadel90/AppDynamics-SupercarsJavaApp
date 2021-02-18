@@ -86,6 +86,12 @@ The datasource is defined in context.xml in src/webapp/META-INF
 		&lt;role rolename="admin-gui" />
 		&lt;user username="admin" password="password" roles="admin-gui" /&gt; 
 		</code></pre>
+		For a manager to be accessible from any host/IP, you'll need to open webapps/manager/META-INF/context.xml and comment the Valve section to be like the below:
+		<pre><code>
+		&lt;!--
+		<Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+		--&gt;
+		</code></pre>
 	- Start Tomcat
 		<pre><code>
 		/usr/local/apache/apache-tomcat-7/bin/startup.sh
