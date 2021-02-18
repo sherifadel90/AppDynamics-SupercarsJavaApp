@@ -89,7 +89,7 @@ The datasource is defined in context.xml in src/webapp/META-INF
 		For a manager to be accessible from any host/IP, you'll need to open webapps/manager/META-INF/context.xml and comment the Valve section to be like the below:
 		<pre><code>
 		&lt;!--
-		<Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+		&lt;Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /&gt;
 		--&gt;
 		</code></pre>
 	- Start Tomcat
